@@ -10,68 +10,108 @@ body, html {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background: #f5f5f5;
-  color: #364f6b;
+  background: #dee0e3;
+  color: black;
   overflow-x: hidden;
-  font-family: "Roboto";
+  font-family: "NoirPro";
   font-weight: normal;
 }
 
 /* ---НАСТРОЙКА ШРИФТОВ СТРАНИЦЫ--- */
 @font-face {
+  font-family: 'NoirPro';
+  src: url("../fonts/NoirPro-Light.eot");
+  src: local("☺"), url("../fonts/NoirPro-Light.woff") format("woff"), url("../fonts/NoirPro-Light.ttf") format("truetype"), url("../fonts/NoirPro-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NoirPro';
+  src: url("../fonts/NoirPro-Regular.eot");
+  src: local("☺"), url("../fonts/NoirPro-Regular.woff") format("woff"), url("../fonts/NoirPro-Regular.ttf") format("truetype"), url("../fonts/NoirPro-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NoirPro';
+  src: url("../fonts/NoirPro-Medium.eot");
+  src: local("☺"), url("../fonts/NoirPro-Medium.woff") format("woff"), url("../fonts/NoirPro-Medium.ttf") format("truetype"), url("../fonts/NoirPro-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NoirPro';
+  src: url("../fonts/NoirPro-Bold.eot");
+  src: local("☺"), url("../fonts/NoirPro-Bold.woff") format("woff"), url("../fonts/NoirPro-Bold.ttf") format("truetype"), url("../fonts/NoirPro-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Light.eot");
+  src: local("☺"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Roboto';
   src: url("../fonts/Roboto-Regular.eot");
-  src: local("☺"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
-  font-weight: 400;
+  src: local("☺"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.svg") format("svg");
+  font-weight: normal;
   font-style: normal;
 }
 
 .goods {
   position: relative;
   min-height: 300px;
-  background: #f5f5f5;
+  background: #dee0e3;
 }
 
 .products {
   position: relative;
   min-height: 300px;
-  background: #fc5185;
+  background: #cf001f;
 }
 
 .services {
   position: relative;
   min-height: 300px;
-  background: #3fc1c9;
+  background: #254777;
 }
 
 .advantages {
   position: relative;
   min-height: 300px;
-  background: #f5f5f5;
+  background: #dee0e3;
 }
 
 .reviews {
   position: relative;
   min-height: 300px;
-  background: #fc5185;
+  background: #cf001f;
 }
 
 .news {
   position: relative;
   min-height: 300px;
-  background: #3fc1c9;
+  background: #254777;
 }
 
 .contacts {
   position: relative;
   min-height: 300px;
-  background: #f5f5f5;
+  background: #dee0e3;
 }
 
 .goods {
   position: relative;
   min-height: 300px;
-  background: #fc5185;
+  background: #cf001f;
 }
 
 .container {
@@ -86,20 +126,20 @@ body, html {
   left: 0;
   min-height: 100%;
   width: 200px;
-  background: #f5f5f5;
+  background: #dee0e3;
 }
 
 .navigation {
   position: relative;
   min-height: 50px;
-  background: #364f6b;
-  color: #f5f5f5;
+  background: black;
+  color: #dee0e3;
 }
 
 .header {
   position: relative;
   min-height: 300px;
-  background: #f5f5f5;
+  background: #dee0e3;
 }
 
 /* ---ПОДВАЛ СТРАНИЦЫ--- */
@@ -109,8 +149,8 @@ body, html {
 
 footer {
   position: relative;
-  background-color: #364f6b;
-  color: #f5f5f5;
+  background-color: black;
+  color: #dee0e3;
   flex: 0 0 auto;
 }
 
