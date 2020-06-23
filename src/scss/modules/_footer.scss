@@ -1,13 +1,14 @@
 /* ---ПОДВАЛ СТРАНИЦЫ--- */
-.content{
-	flex: 1 0 auto;
+.content {
+  flex: 1 0 auto;
 }
-footer{
-	position: relative;
-	background-color: $mainColor;
-	color: $backColor;
-	flex: 0 0 auto;
+footer {
+  position: relative;
+  background-color: $mainColor;
+  color: $backColor;
+  flex: 0 0 auto;
 }
-.footer{
-	text-align: center;
+.footer {
+  min-height: 300px;
+  text-align: center;
 }

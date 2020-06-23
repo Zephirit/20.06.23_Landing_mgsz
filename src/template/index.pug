@@ -4,4 +4,15 @@ block variables
 	- var title = "Шаблон"
 //- Тело блока
 block content
-	include ./templates/_footer
+	include ./templates/_sidebar
+	.container
+		include ./templates/_navigation
+		include ./templates/_header
+		include ./templates/_1-goods
+		include ./templates/_2-products
+		include ./templates/_3-services
+		include ./templates/_4-advantages
+		include ./templates/_5-reviews
+		include ./templates/_6-news
+		include ./templates/_7-contacts
+		include ./templates/_footer

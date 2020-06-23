@@ -13,4 +13,16 @@ $contrColor: #fc5185;
 // Страницы
 @import "./pages/index.scss";
 // Модули
+@import "./modules/_1-goods.scss";
+@import "./modules/_2-products.scss";
+@import "./modules/_3-services.scss";
+@import "./modules/_4-advantages.scss";
+@import "./modules/_5-reviews.scss";
+@import "./modules/_6-news.scss";
+@import "./modules/_7-contacts.scss";
+@import "./modules/_sertificates.scss";
+@import "./modules/_form.scss";
+@import "./modules/_sidebar.scss";
+@import "./modules/_navigation.scss";
+@import "./modules/_header.scss";
 @import "./modules/_footer.scss";
