@@ -1,11 +1,13 @@
-mixin footer-column(name,line1,line2,line3,line4,line5,line6,line7)
+mixin footer-column(name,arr)
 	.footer-column
+		+square-small-blue
 		.footer-column__name=name
 		.footer-column__lines
-			.footer-column__line.footer-column__line1=line1
-			.footer-column__line.footer-column__line2=line2
-			.footer-column__line.footer-column__line3=line3
-			.footer-column__line.footer-column__line4=line4
-			.footer-column__line.footer-column__line5=line5
-			.footer-column__line.footer-column__line6=line6
-			.footer-column__line.footer-column__line7=line7
+			each item in arr
+				.footer-column__line=item
+			// .footer-column__line.footer-column__line2=line2
+			// .footer-column__line.footer-column__line3=line3
+			// .footer-column__line.footer-column__line4=line4
+			// .footer-column__line.footer-column__line5=line5
+			// .footer-column__line.footer-column__line6=line6
+			// .footer-column__line.footer-column__line7=line7

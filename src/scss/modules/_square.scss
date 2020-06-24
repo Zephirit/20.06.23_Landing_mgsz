@@ -1,0 +1,61 @@
+.square-small-blue {
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	background-color: #729ccf;
+	left: -18px;
+	top: 10px;
+	&__inner {
+		position: relative;
+		margin: 4px;
+		height: 7px;
+		width: 7px;
+		background-color: white; 
+	}
+}
+.square-medium-blue {
+	position: absolute;
+	height: 32px;
+	width: 32px;
+	background-color: $subColor;
+	left: -35px;
+	top: -16px;
+	&__inner {
+		position: relative;
+		margin: 8px;
+		height: 16px;
+		width: 16px;
+		background-color: white; 
+	}
+}
+.square-large-blue {
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	background-color: #729ccf;
+	left: -45px;
+	top: -30px;
+	&__inner {
+		position: relative;
+		margin: 15px;
+		height: 30px;
+		width: 30px;
+		background-color: white; 
+	}
+}
+
+.square-small-red {
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	background-color: $contrColor;
+	left: -18px;
+	top: 10px;
+	&__inner {
+		position: relative;
+		margin: 4px;
+		height: 7px;
+		width: 7px;
+		background-color: white; 
+	}
+}

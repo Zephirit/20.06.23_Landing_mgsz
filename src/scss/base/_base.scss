@@ -13,4 +13,7 @@ body,html {
 	overflow-x: hidden;
 	font-family: "NoirPro";
 	font-weight: normal;
+	& a {
+		cursor: pointer;
+	}
 }

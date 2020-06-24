@@ -12,51 +12,508 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/animate.min.css">
     <link rel="stylesheet" href="./assets/css/hover-min.css">
+    <link rel="stylesheet" href="./assets/libraries/glide-3.4.1/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="./assets/css/app.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
+      <input type="checkbox" id="burger">
+      <label class="burger" for="burger">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+      </label>
       <sidebar class="sidebar">
         <div class="sidebar__logo"><img class="sidebar__svg" src="./assets/images/logo.png"></div>
         <div class="sidebar__phones">
-          <div class="sidebar__place"><span>Санкт-Петербург</span><a href="tel:88124481348">
-              <p>8 (812) 448-13-48</p></a></div>
-          <div class="sidebar__place"><span>Москва</span><a href="tel:84996537548">
-              <p>8 (499) 653-75-48</p></a></div>
+          <div class="sidebar__place"><span>Санкт-Петербург</span><a href="tel:88124481348">8 (812) 448-13-48</a></div>
+          <div class="sidebar__place"><span>Москва</span><a href="tel:84996537548">8 (499) 653-75-48</a></div>
         </div>
-        <div class="sidebar__call"><a href="#"><span>Заказать звонок</span></a></div>
-        <div class="sidebar__rolling"></div>
-        <div class="sidebar__construct"></div>
-        <div class="sidebar__services"></div>
-        <div class="sidebar__calc"></div>
-        <div class="sidebar__price"></div>
+        <div class="sidebar__call"><a href="#">Заказать звонок</a></div>
+        <div class="sidebar__rolling sidebar__category">
+          <input type="checkbox" id="rolling">
+          <label for="rolling">
+            <h3>Металлопрокат</h3>
+          </label>
+              <div class="sideType">
+                <input type="checkbox" id="tube">
+                <label for="tube"><span>Трубы и фасонные изделия</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="fastener">
+                <label for="fastener"><span>Метизы</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sheet">
+                <label for="sheet"><span>Листовой прокат</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sort">
+                <label for="sort"><span>Сортовой прокат</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="dowel">
+                <label for="dowel"><span>Шпунn</span><span>></span></label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="strip">
+                <label for="strip"><span>Полособульб</span><span>></span></label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="forging">
+                <label for="forging"><span>Поковки</span><span>></span></label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+        </div>
+        <div class="sidebar__construct sidebar__category">
+          <input type="checkbox" id="construct">
+          <label for="construct">
+            <h3>Металлоконструкции</h3>
+          </label>
+              <div class="sideType">
+                <input type="checkbox" id="tube2">
+                <label for="tube2"><span>Трубы и фасонные изделия</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="fastener2">
+                <label for="fastener2"><span>Метизы</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sheet2">
+                <label for="sheet2"><span>Листовой прокат</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sort2">
+                <label for="sort2"><span>Сортовой прокат</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="dowel2">
+                <label for="dowel2"><span>Шпунn</span><span>></span></label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="strip2">
+                <label for="strip2"><span>Полособульб</span><span>></span></label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="forging2">
+                <label for="forging2"><span>Поковки</span><span>></span></label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+        </div>
+        <div class="sidebar__serv sidebar__category">
+          <input type="checkbox" id="serv">
+          <label for="serv">
+            <h3>Услуги</h3>
+          </label>
+              <div class="sideType">
+                <input type="checkbox" id="tube3">
+                <label for="tube3"><span>Трубы и фасонные изделия</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="fastener3">
+                <label for="fastener3"><span>Метизы</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sheet3">
+                <label for="sheet3"><span>Листовой прокат</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sort3">
+                <label for="sort3"><span>Сортовой прокат</span><span>></span></label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="dowel3">
+                <label for="dowel3"><span>Шпунn</span><span>></span></label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="strip3">
+                <label for="strip3"><span>Полособульб</span><span>></span></label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="forging3">
+                <label for="forging3"><span>Поковки</span><span>></span></label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+        </div>
+        <div class="sidebar__calc sidebar__other">
+          <div class="sidebar__icon"><img src="./assets/images/calculator.png" alt="calculator"></div><span>Калькулятор</span>
+        </div>
+        <div class="sidebar__price sidebar__other">
+          <div class="sidebar__icon"><img src="./assets/images/copy.png" alt="copy"></div><span>Скачать прайс-лист</span>
+        </div>
       </sidebar>
       <div class="container">
-        <nav class="navigation"></nav>
-        <header class="header"></header>
+        <nav class="navigation" id="navigation">
+          <div class="navigation__menu">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a href=""><span>О компании</span><span>></span></a></li>
+              <li class="navigation__item"><a href=""><span>Клиенты</span></a></li>
+              <li class="navigation__item"><a href=""><span>Галерея</span></a></li>
+              <li class="navigation__item"><a href=""><span>Полезное</span></a></li>
+              <li class="navigation__item"><a href=""><span>Контакты</span></a></li>
+            </ul>
+            <button class="navigation__tick">
+              <div class="navigation__img"><img src="./assets/images/tick.png" alt="order"></div><span>Оставить заявку</span>
+            </button>
+          </div>
+        </nav>
+        <header class="header">
+          <div class="header__bg"><img src="./assets/images/bg_main_lg.jpg" alt="bg"></div>
+          <div class="header__content">
+            <h1 class="header__title"> <span>Продажа металлопроката</span><span>В Санкт-Петербурге, Москве и других регионах</span></h1>
+            <div class="header__advantages"><span>Качество</span>
+                  <div class="square-small-red">
+                    <div class="square-small-red__inner"></div>
+                  </div><span>Отсрочка</span>
+                  <div class="square-small-red">
+                    <div class="square-small-red__inner"></div>
+                  </div><span>Комплектация</span>
+            </div>
+            <div class="header__search">
+                  <div class="search" id="search">
+                    <div class="search__input">
+                          <div class="square-small-blue">
+                            <div class="square-small-blue__inner"></div>
+                          </div>
+                      <input type="text">
+                      <label>Что вы ищите?</label>
+                      <div class="search__magnify"><img src="./assets/images/magnifying-glass.png" alt="magnifying-glass"></div>
+                    </div>
+                  </div>
+            </div>
+            <div class="header__oft">
+              <ul class="oft">Часто ищут:
+                <li><a href="#">Лист стальной</a></li>
+                <li> <a href="#">Арматура</a></li>
+                <li> <a href="#">Электроды</a></li>
+                <li> <a href="#">Проволока</a></li>
+                <li> <a href="#">Сортовой прокат</a></li>
+                <li> <a href="#">Закладные детали</a></li>
+                <li> <a href="#">Арматурные каркасы</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
         <section class="section goods" id="goods">
           <div class="goods__content">
-            <div class="goods__title">Товары месяца</div>
-            <div class="goods__body"></div>
+                <div class="square-large-blue">
+                  <div class="square-large-blue__inner"></div>
+                </div>
+            <div class="products__heading">
+              <div class="products__title">Товары месяца</div>
+            </div>
+            <div class="goods__slider">
+              <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <div class="glide__slides goods__slides">
+                    <div class="glide-slide">
+                      <div class="good">
+                        <div class="good__image"><img src="./assets/images/goods_armature.jpg" alt="armature"></div>
+                            <div class="square-small-red">
+                              <div class="square-small-red__inner"></div>
+                            </div>
+                        <div class="good__title">Лист</div><a class="good__link" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                    <div class="glide-slide">
+                      <div class="good">
+                        <div class="good__image"><img src="./assets/images/goods_steel.jpg" alt="steel"></div>
+                            <div class="square-small-red">
+                              <div class="square-small-red__inner"></div>
+                            </div>
+                        <div class="good__title">Арматура</div><a class="good__link" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                    <div class="glide-slide">
+                      <div class="good">
+                        <div class="good__image"><img src="./assets/images/goods_steel.jpg" alt="steel"></div>
+                            <div class="square-small-red">
+                              <div class="square-small-red__inner"></div>
+                            </div>
+                        <div class="good__title">Арматура</div><a class="good__link" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-glide-el="controls">
+                  <button data-glide-dir="&lt;&lt;"><</button>
+                  <button data-glide-dir="&gt;&gt;">></button>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="section products" id="products">
           <div class="products__content">
-            <div class="products__title">Наша продукция</div>
-            <div class="products__body"></div>
+                <div class="square-large-blue">
+                  <div class="square-large-blue__inner"></div>
+                </div>
+            <div class="products__heading">
+              <div class="products__title">Наша продукция</div>
+              <div class="products__subtitle"> 
+                <p>Наша компания предлагает широкий выбор услуг, связанных с металлом.</p>
+                <p>Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</p>
+              </div>
+            </div>
+            <div class="products__body">
+                  <div class="product">
+                    <div class="product__img"><img src="./assets/images/products_tube.jpg" alt="tube"></div>
+                    <div class="product__name">Трубы
+                          <div class="square-medium-blue">
+                            <div class="square-medium-blue__inner"></div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="product">
+                    <div class="product__img"><img src="./assets/images/products_armature.jpg" alt="armature"></div>
+                    <div class="product__name">Арматура
+                          <div class="square-medium-blue">
+                            <div class="square-medium-blue__inner"></div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="product">
+                    <div class="product__img"><img src="./assets/images/products_balk.jpg" alt="balk"></div>
+                    <div class="product__name">Балка (двутавр)
+                          <div class="square-medium-blue">
+                            <div class="square-medium-blue__inner"></div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="product">
+                    <div class="product__img"><img src="./assets/images/products_corner.jpg" alt="corner"></div>
+                    <div class="product__name">Угол
+                          <div class="square-medium-blue">
+                            <div class="square-medium-blue__inner"></div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="product">
+                    <div class="product__img"><img src="./assets/images/products_channel.jpg" alt="channel"></div>
+                    <div class="product__name">Швеллер
+                          <div class="square-medium-blue">
+                            <div class="square-medium-blue__inner"></div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="product">
+                    <div class="product__img"><img src="./assets/images/products_sheet.jpg" alt="sheet"></div>
+                    <div class="product__name">Лист
+                          <div class="square-medium-blue">
+                            <div class="square-medium-blue__inner"></div>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+            <button class="products__button">
+              <div class="products__button-icon"><img src="./assets/images/products_button.png" alt="Полный каталог"></div>
+              <div class="products__button-text">Полный каталог продукции</div>
+            </button>
           </div>
         </section>
+            <div class="form">
+              <div class="form__bg"><img src="./assets/images/form_lg.jpg" alt="Фон формы"></div>
+              <div class="form__content">
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="form__heading">
+                  <div class="form__title">Оставьте заявку</div>
+                  <div class="form__subtitle">и наши менеджеры оперативно ответят вам!</div>
+                </div>
+                <div class="form__body">
+                  <div class="form__body-top">
+                    <input type="name" placeholder="Ваше имя">
+                    <input type="phone" placeholder="Телефон">
+                    <input type="email" placeholder="Электронная почта">
+                  </div>
+                  <div class="form__body-bottom">
+                    <div class="form__body-message">
+                      <input type="textarea" placeholder="Текст сообщения">
+                    </div>
+                    <div class="form__body-submit">
+                      <div class="form__body-check">
+                        <div class="form__body-checker">
+                          <input type="checkbox">
+                        </div>
+                        <div class="form__body-text">Я подтверждаю, что ознакомлен(а) и согласен(на) с условиями<a href="">Передачи информации</a></div>
+                      </div>
+                      <button class="form__button">
+                        <div class="form__button-icon"><img src="./assets/images/form_button.png" alt="Отправить"></div>
+                        <div class="form__button-text">Отправить</div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         <section class="section services" id="services">
           <div class="services__content">
-            <div class="services__title">Мы предлагаем услуги</div>
-            <div class="services__body"></div>
+                <div class="square-large-blue">
+                  <div class="square-large-blue__inner"></div>
+                </div>
+            <div class="services__heading"><span class="services__title">Мы предлагаем услуги</span><a class="services__subtitle" href="">Все услуги</a></div>
+            <div class="services__body">
+                  <div class="service">
+                    <div class="service__heading">
+                      <div class="service__img"><img src="./assets/images/services_1.png" alt="service_1"></div>
+                      <div class="service__number">01</div>
+                    </div>
+                    <div class="service__title">Изготовление металло- конструкций</div>
+                    <div class="service__subtitle">Металлоконструкции – неотъемлемая составляющая любого строительного процесса. Благодаря их удивительным свойствам, особенностям и функциональным характеристикам, сооружения получаются устойчивыми, крепкими, надежными и безопасными для окружающих.</div>
+                  </div>
+                  <div class="service">
+                    <div class="service__heading">
+                      <div class="service__img"><img src="./assets/images/services_2.png" alt="service_2"></div>
+                      <div class="service__number">02</div>
+                    </div>
+                    <div class="service__title">Изоляция</div>
+                    <div class="service__subtitle">Изоляция для подземной бесканальной прокладки в полиэтиленовой гидрозащитной оболочке и для надземной прокладки в оцинкованной оболочке диаметрами 57/125—1420/1600 мм, а также комплектующие (отводы, сильфонные компесаторы, неподвижные щитовые опоры, переходы и комплекты для заделки стыков).</div>
+                  </div>
+                  <div class="service">
+                    <div class="service__heading">
+                      <div class="service__img"><img src="./assets/images/services_3.png" alt="service_3"></div>
+                      <div class="service__number">03</div>
+                    </div>
+                    <div class="service__title">Оцинкование металла</div>
+                    <div class="service__subtitle">Коррозия – злейший враг металла. Эффективным способом защиты металлоконструкций от коррозии является нанесение цинковых покрытий. Наша компания предлагает Вам оцинкование металлоконструкций.</div>
+                  </div>
+                  <div class="service">
+                    <div class="service__heading">
+                      <div class="service__img"><img src="./assets/images/services_4.png" alt="service_4"></div>
+                      <div class="service__number">04</div>
+                    </div>
+                    <div class="service__title">Грунтовка металла</div>
+                    <div class="service__subtitle">Для того чтобы увеличить срок службы металлических конструкций и придать им эстетичный вид, выполняются покрасочные работы. Но прежде чем наносить краску, нужно провести обработку поверхности – это улучшит прилегание состава к металлу и усилит его защитные свойства.</div>
+                  </div>
+                  <div class="service">
+                    <div class="service__heading">
+                      <div class="service__img"><img src="./assets/images/services_5.png" alt="service_5"></div>
+                      <div class="service__number">05</div>
+                    </div>
+                    <div class="service__title">Резка металла</div>
+                    <div class="service__subtitle">Компания «МеталлГрупп Северо-Запад» предлагает услуги по резке металлопроката. Мы имеем возможность отрабатывать заявки с резкой металла в необходимый размер, наши специалисты оформят Вашу заявку на резку со всеми необходимыми условиями. </div>
+                  </div>
+                  <div class="service">
+                    <div class="service__heading">
+                      <div class="service__img"><img src="./assets/images/services_6.png" alt="service_6"></div>
+                      <div class="service__number">06</div>
+                    </div>
+                    <div class="service__title">Погрузо-разгрузочные работы</div>
+                    <div class="service__subtitle">Загрузка металла на складе происходит в открытый кузов нашим краном бесплатно. Если автотранспорт на загрузку приходит с закрытый то возможно осуществить  ручную погрузка в Ваш транспорт. Стоимость ручной погрузки 2500 р. за тн металла.</div>
+                  </div>
+            </div>
           </div>
         </section>
         <section class="section advantages" id="advantages">
           <div class="advantages__content">
-            <div class="advantages__title">Что вы получаете?</div>
-            <div class="advantages__body"></div>
+                <div class="square-large-blue">
+                  <div class="square-large-blue__inner"></div>
+                </div>
+            <div class="advantages__heading">
+              <h2 class="advantages__title">Что вы получаете?</h2>
+              <div class="advantages__subtitle">
+                <p>ООО «МеталлГрупп Северо-Запад» — это команда профессионалов, которым важен каждый Ваш заказ, мы работаем ради Вашего успеха и ценим Вашу благодарность! Оглядываясь назад, мы гордимся, что поставляли металлопрокат и металлоконструкции на множество строительных объектов, в том числе на ЗСД, Зенит-Арена, Лахта-Центр и другие.</p>
+              </div>
+            </div>
+            <div class="advantages__list">
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_1.png" alt="advantages_1"></div>
+                <div class="advantages__text"><span>Вас</span><span>не обвесят!</span></div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_2.png" alt="advantages_2"></div>
+                <div class="advantages__text"><span>Вам дадут</span><span>товар в долг!</span></div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_3.png" alt="advantages_3"></div>
+                <div class="advantages__text"><span>Вам</span><span>сделают скидку!</span></div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_4.png" alt="advantages_4"></div>
+                <div class="advantages__text"><span>Весь необходимый вам</span><span>ассортимент в одном месте!</span></div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_5.png" alt="advantages_5"></div>
+                <div class="advantages__text"><span>Специальные цены</span><span>при покупке в предоплату!</span></div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="section reviews" id="reviews">
@@ -73,33 +530,160 @@
         </section>
         <section class="section contacts" id="contacts">
           <div class="contacts__content">
-            <div class="contacts__title">Контакты</div>
-            <div class="contacts__body"></div>
+                <div class="square-large-blue">
+                  <div class="square-large-blue__inner"></div>
+                </div>
+            <div class="contacts__heading">
+              <div class="contacts__title">Контакты</div>
+            </div>
           </div>
-        </section>
-        <footer class="animated rubberBand">
-          <div class="footer">
-            <div class="footer__top">
-              <div class="footer__image">
-                <div class="footer__logo"><img src="./assets/images/logo.png" alt="logo"></div><a class="footer__calc-metal" href="">Калькулятор металлопроката</a><a class="footer__calc-tube" href="">Трубный калькулятор</a>
-              </div>
-                  <div class="footer-column">
-                    <div class="footer-column__name">Компания</div>
-                    <div class="footer-column__lines">
-                      <div class="footer-column__line1">Наши клиенты</div>
-                      <div class="footer-column__line2">Наши объекты</div>
-                      <div class="footer-column__line3">Наш склад</div>
-                      <div class="footer-column__line4">Госты</div>
-                      <div class="footer-column__line5">Спецпредложения</div>
-                      <div class="footer-column__line6">Контакты</div>
-                      <div class="footer-column__line7"></div>
-                    </div>
+          <div class="contacts__maps">
+            <div class="contacts__piece contacts__data sp-office">
+                  <div class="contact">
+                    <h3 class="contact__title">офис в санкт-петербурге</h3>
+                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a>
+                    <div class="contact__address"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></div>
+                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
-            <div class="footer__bottom"></div>
+            <div class="contacts__piece contacts__map sp-office"><img src="./assets/images/sp-office.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__data sp-stock">
+                  <div class="contact">
+                    <h3 class="contact__title">склад в санкт-петербурге</h3>
+                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a>
+                    <div class="contact__address"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></div>
+                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                  </div>
+            </div>
+            <div class="contacts__piece contacts__map sp-stock"><img src="./assets/images/sp-stock.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__data msk-stock">
+                  <div class="contact">
+                    <h3 class="contact__title">склад в москве</h3>
+                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>Карачарово, ул. Стахановская, д. 19</span></div><a class="contact__phone" href="tel: 84996537548"><img src="./assets/images/phone-call.png" alt="address"><span> 8 (499) 653-75-48</span></a>
+                    <div class="contact__address"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></div>
+                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                  </div>
+            </div>
+            <div class="contacts__piece contacts__map msk-stock"><img src="./assets/images/msk-stock.jpg" alt="sp-office"></div>
           </div>
+        </section>
+            <div class="form">
+              <div class="form__bg"><img src="./assets/images/form_lg.jpg" alt="Фон формы"></div>
+              <div class="form__content">
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="form__heading">
+                  <div class="form__title">Оставьте заявку</div>
+                  <div class="form__subtitle">и наши менеджеры оперативно ответят вам!</div>
+                </div>
+                <div class="form__body">
+                  <div class="form__body-top">
+                    <input type="name" placeholder="Ваше имя">
+                    <input type="phone" placeholder="Телефон">
+                    <input type="email" placeholder="Электронная почта">
+                  </div>
+                  <div class="form__body-bottom">
+                    <div class="form__body-message">
+                      <input type="textarea" placeholder="Текст сообщения">
+                    </div>
+                    <div class="form__body-submit">
+                      <div class="form__body-check">
+                        <div class="form__body-checker">
+                          <input type="checkbox">
+                        </div>
+                        <div class="form__body-text">Я подтверждаю, что ознакомлен(а) и согласен(на) с условиями<a href="">Передачи информации</a></div>
+                      </div>
+                      <button class="form__button">
+                        <div class="form__button-icon"><img src="./assets/images/form_button.png" alt="Отправить"></div>
+                        <div class="form__button-text">Отправить</div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <footer class="animated rubberBand">
+          <div class="footer">
+            <div class="footer__content">
+              <div class="footer__top">
+                <div class="footer__image">
+                  <div class="footer__logo"><img src="./assets/images/logo.png" alt="logo"></div><a class="footer__calc-metal" href="">Калькулятор металлопроката</a><a class="footer__calc-tube" href="">Трубный калькулятор</a>
+                </div>
+                    <div class="footer-column">
+                          <div class="square-small-blue">
+                            <div class="square-small-blue__inner"></div>
+                          </div>
+                      <div class="footer-column__name">Компания</div>
+                      <div class="footer-column__lines">
+                        <div class="footer-column__line">Наши клиенты</div>
+                        <div class="footer-column__line">Наши объекты</div>
+                        <div class="footer-column__line">Наш склад</div>
+                        <div class="footer-column__line">Госты</div>
+                        <div class="footer-column__line">Спецпредложения</div>
+                        <div class="footer-column__line">Контакты</div>
+                        <!-- .footer-column__line.footer-column__line2=line2-->
+                        <!-- .footer-column__line.footer-column__line3=line3-->
+                        <!-- .footer-column__line.footer-column__line4=line4-->
+                        <!-- .footer-column__line.footer-column__line5=line5-->
+                        <!-- .footer-column__line.footer-column__line6=line6-->
+                        <!-- .footer-column__line.footer-column__line7=line7-->
+                      </div>
+                    </div>
+                    <div class="footer-column">
+                          <div class="square-small-blue">
+                            <div class="square-small-blue__inner"></div>
+                          </div>
+                      <div class="footer-column__name">Металлоконструкции</div>
+                      <div class="footer-column__lines">
+                        <div class="footer-column__line">Закладные детали</div>
+                        <div class="footer-column__line">Сетки-каркасы</div>
+                        <div class="footer-column__line">Производство плоских каркасов</div>
+                        <div class="footer-column__line">Производство объемных каркасов</div>
+                        <div class="footer-column__line">Полезная информация</div>
+                        <!-- .footer-column__line.footer-column__line2=line2-->
+                        <!-- .footer-column__line.footer-column__line3=line3-->
+                        <!-- .footer-column__line.footer-column__line4=line4-->
+                        <!-- .footer-column__line.footer-column__line5=line5-->
+                        <!-- .footer-column__line.footer-column__line6=line6-->
+                        <!-- .footer-column__line.footer-column__line7=line7-->
+                      </div>
+                    </div>
+                    <div class="footer-column">
+                          <div class="square-small-blue">
+                            <div class="square-small-blue__inner"></div>
+                          </div>
+                      <div class="footer-column__name">Услуги</div>
+                      <div class="footer-column__lines">
+                        <div class="footer-column__line">Изоляция ППУ</div>
+                        <div class="footer-column__line">Изоляция труб ВУС 5</div>
+                        <div class="footer-column__line">Оцинкование металла</div>
+                        <div class="footer-column__line">Грунтовка</div>
+                        <div class="footer-column__line">Резка металла</div>
+                        <div class="footer-column__line">Доставка</div>
+                        <div class="footer-column__line">Погрузочно-разгрузочные работы</div>
+                        <!-- .footer-column__line.footer-column__line2=line2-->
+                        <!-- .footer-column__line.footer-column__line3=line3-->
+                        <!-- .footer-column__line.footer-column__line4=line4-->
+                        <!-- .footer-column__line.footer-column__line5=line5-->
+                        <!-- .footer-column__line.footer-column__line6=line6-->
+                        <!-- .footer-column__line.footer-column__line7=line7-->
+                      </div>
+                    </div>
+              </div>
+              <div class="footer__bottom">
+                <div class="footer__bottom-columns">
+                  <div class="footer__company">ООО "МеталлГрупп Северо-Запад"</div><a class="footer__requisites" href="">Реквизиты организации</a><a class="footer__politics" href="">Политика конфиденциальности</a>
+                  <div class="footer__year">2010-2020. Все права защищены.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom-bg"></div>
         </footer>
       </div>
     </div>
+    <script src="./assets/libraries/glide-3.4.1/dist/glide.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

@@ -1,5 +1,21 @@
 section.section.goods#goods
 	.goods__content
-		.goods__title Товары месяца
-		.goods__body
+		+square-large-blue
+		.products__heading
+			.products__title Товары месяца
+		.goods__slider
+			.glide
+				.glide__track(data-glide-el="track")
+					.glide__slides.goods__slides
+						each item in [{'img':'armature','title':'Лист','link':'#'},{'img':'steel','title':'Арматура','link':'#'},{'img':'steel','title':'Арматура','link':'#'}]
+							.glide-slide
+								.good
+									.good__image
+										img(src=`./assets/images/goods_${item.img}.jpg`, alt=item.img)
+									+square-small-red
+									.good__title=item.title
+									a(href=item.link).good__link Подробнее
+				div(data-glide-el='controls')
+					button(data-glide-dir="<<") <
+					button(data-glide-dir=">>") >
 			

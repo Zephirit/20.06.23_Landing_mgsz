@@ -1,5 +1,79 @@
-.contacts{
+.contacts {
 	position: relative;
-	min-height: 300px;
-	background: $backColor;
+	width: 100%;
+	background: white;
+
+	&__content {
+		position: relative;
+		max-width: 1170px;
+		height: auto;
+		margin: auto;
+		padding: 40px 15px;
+		box-sizing: border-box;
+	}
+
+	&__heading {
+		position: relative;
+		display: flex;
+		margin-bottom: 10px;
+	}
+
+	&__title {
+		position: relative;
+		width: 390px;
+		margin-right: 100px;
+		font-size: 60px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&__maps {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+	&__piece{
+		position: relative;
+		width: 50%;
+		
+		min-height: 100px;
+	}
+	&__data{
+		position: relative;
+		background: #f5f5f5;
+		padding: 30px 0;
+		display: flex;
+		justify-content: center;
+		&.sp-office{
+			order: 1;
+		}
+		&.sp-stock{
+			order: 4;
+		}
+		&.msk-stock{
+			order: 5;
+		}
+	}
+	&__map{
+		background: transparent;
+		overflow: hidden;
+		& img{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&.sp-office{
+			order: 2
+		}
+		&.sp-stock{
+			order: 3
+		}
+		&.msk-stock{
+			order: 6
+		}
+	}
 }

@@ -1,0 +1,27 @@
+mixin form 
+	.form
+		.form__bg
+			img(src="./assets/images/form_lg.jpg", alt="Фон формы")
+		.form__content
+			+square-large-blue
+			.form__heading
+				.form__title Оставьте заявку
+				.form__subtitle и наши менеджеры оперативно ответят вам!
+			.form__body
+				.form__body-top
+					input(type='name' placeholder='Ваше имя')
+					input(type='phone' placeholder='Телефон')
+					input(type='email' placeholder='Электронная почта')
+				.form__body-bottom
+					.form__body-message
+						input(type='textarea' placeholder='Текст сообщения')
+					.form__body-submit
+						.form__body-check
+							.form__body-checker
+								input(type='checkbox')
+							.form__body-text Я подтверждаю, что ознакомлен(а) и согласен(на) с условиями
+								a(href='') Передачи информации
+						button.form__button
+							.form__button-icon
+								img(src="./assets/images/form_button.png", alt="Отправить")
+							.form__button-text Отправить

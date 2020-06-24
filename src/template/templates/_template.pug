@@ -20,6 +20,7 @@ html(lang="ru-Ru")
 		link(rel='stylesheet' href='./assets/css/normalize.css')
 		link(rel='stylesheet' href='./assets/css/animate.min.css')
 		link(rel='stylesheet' href='./assets/css/hover-min.css')
+		link(rel='stylesheet' href='./assets/libraries/glide-3.4.1/dist/css/glide.core.min.css')
 		link(rel='stylesheet' href='./assets/css/app.css')
 		
 
@@ -29,6 +30,8 @@ html(lang="ru-Ru")
 
 
 	body
-		//- include ../common/_mixins
+		include ../common/_mixins
 		.wrapper
 			block content
+		script(src="./assets/libraries/glide-3.4.1/dist/glide.min.js")
+		script(src="./assets/js/script.js")

@@ -1,0 +1,6 @@
+mixin product(name,image)
+	.product
+		.product__img
+			img(src=`./assets/images/products_${image}.jpg`, alt=`${image}`)
+		.product__name=name
+			+square-medium-blue

@@ -1,5 +1,23 @@
 section.section.products#products
 	.products__content
-		.products__title Наша продукция
+		+square-large-blue
+		.products__heading
+			.products__title Наша продукция
+			.products__subtitle 
+				p Наша компания предлагает широкий выбор услуг, связанных с металлом.
+				p Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.
 		.products__body
+			+product('Трубы','tube')
+			+product('Арматура','armature')
+			+product('Балка (двутавр)','balk')
+			+product('Угол','corner')
+			+product('Швеллер','channel')
+			+product('Лист','sheet')
+		button.products__button
+			.products__button-icon
+				img(src="./assets/images/products_button.png", alt="Полный каталог")
+			.products__button-text Полный каталог продукции
+
+
+			
 			

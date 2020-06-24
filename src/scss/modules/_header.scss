@@ -1,5 +1,69 @@
-.header{
+.header {
 	position: relative;
+	z-index: 0;
 	min-height: 300px;
 	background: $backColor;
+
+	&__bg {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		& img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		position: relative;
+		padding: 65px 15px 125px;
+		z-index: 5;
+		width: 1170px;
+		margin: auto;
+		box-sizing: border-box;
+	}
+
+	&__title {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		& span {
+			position: relative;
+			font-size: 30px;
+			font-family: "NoirPro";
+			font-weight: 500;
+			line-height: 50px;
+			color: #d4d7db;
+
+			&:nth-child(1) {}
+
+			&:nth-child(2) {}
+		}
+	}
+	&__advantages{
+		position: relative;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		& span{
+			font-size: 52px;
+			font-family: "NoirPro";
+			font-weight: 600;
+			// line-height: 100px;
+			color: white;
+			padding: 30px 0;
+			text-transform: uppercase;
+		}
+		& .square-small-red{
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+	}
 }

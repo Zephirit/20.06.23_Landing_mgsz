@@ -9,32 +9,70 @@ footer {
   flex: 0 0 auto;
 }
 .footer {
-  width: 1170px;
+  width: 100%;
   height: auto;
   font-size: 13px;
   font-weight: 500;
-  margin: 42px 0;
-
-
+  z-index: 2;
+  // margin: auto;
+  // padding: 40px 15px 0;
+  &__content {
+    position: relative;
+    width: 1170px;
+    margin: auto;
+    padding: 40px 15px 0;
+  }
   &__top {
     position: relative;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 40px;
+    & a {
+      color: $contrColor;
+      font-weight: normal;
+    }
     
   }
   &__image {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 25%;
   }
-  &__logo {}
-  &__calc-metal {}
-  &__calc-tube {}
+  &__logo {
+    position: relative;
+    margin: 15px 0 25px;
+    width: 220px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__calc-metal {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  &__calc-tube {
+    position: relative;
+  }
   &-column{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    &:first-child {
+      width: 25%;
+    }
+    &:nth-child(2) {
+      width: 15%;
+    }
+    &:nth-child(3) {
+      width: 25%;
+    }
+    &:last-child {
+      width: 25%;
+    }
     &__name {
       position: relative;
       margin: 20px 0;
@@ -58,10 +96,39 @@ footer {
     width: 100%;
     height: 65px;
     display: flex;
-    justify-content: space-between;
+    
     align-items: center;
-    background-color: #efefef;
-
+    color: $mainColor;
+    font-weight: normal;
+    &-columns {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      & a {
+        color: #729ccf;
+      }
+    }
+    &-bg {
+      position: absolute;
+      width: 100%;
+      height: 65px;
+      bottom: 0;
+      background-color: #efefef;
+      z-index: -1;
+    }
+  }
+  &__company {
+    width: 25%;
+  }
+  &__requisites {
+    width: 15%;
+  }
+  &__politics {
+    width: 25%;
+  }
+  &__year {
+    width: 25%;
   }
 }
 

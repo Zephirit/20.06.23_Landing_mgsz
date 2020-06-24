@@ -1,0 +1,8 @@
+mixin service(number,title,subtitle)
+	.service
+		.service__heading
+			.service__img
+				img(src=`./assets/images/services_${number}.png`, alt=`service_${number}`)
+			.service__number='0' + number
+		.service__title=title
+		.service__subtitle=subtitle

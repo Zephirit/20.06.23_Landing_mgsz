@@ -1,0 +1,10 @@
+mixin sideType(id,label,arr=[])
+	.sideType
+		input(type="checkbox" id=id)
+		label(for=id)
+			span=label
+			span >
+		ul.sideType__list
+			each item in arr
+				li.sideType__item
+					a(href="#")=item

@@ -1,0 +1,15 @@
+mixin contact(title,address,tel,phone,mail,link)
+	.contact
+		h3.contact__title=title
+		.contact__address
+			img(src="./assets/images/place.png", alt="address")
+			span=address
+		a(href=`tel:${tel}`).contact__phone
+			img(src="./assets/images/phone-call.png", alt="address")
+			span=phone
+		.contact__address
+			img(src="./assets/images/envelope.png", alt="address")
+			span=mail
+		button.contact__link
+			img(src="./assets/images/next2.png", alt="link")
+			span Обратная связь
