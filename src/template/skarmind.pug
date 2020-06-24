@@ -1,0 +1,24 @@
+//- Наследуемый шаблон _template
+extends ./templates/_template
+include ./common/_skar
+block variables
+	- var title = "МГСЗ"
+//- Тело блока
+block content
+	input(type="checkbox")#burger
+	label(for="burger").burger
+		.burger-line
+		.burger-line
+		.burger-line
+	include ./templates/_sidebar
+	.container
+		include ./templates/_navigation
+		include ./templates/_header
+		//- include ./templates/_1-goods
+		//- include ./templates/_2-products
+		//- include ./templates/_3-services
+		//- include ./templates/_4-advantages
+		//- include ./templates/_5-reviews
+		//- include ./templates/_6-news
+		//- include ./templates/_7-contacts
+		//- include ./templates/_footer

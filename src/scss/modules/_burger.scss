@@ -1,0 +1,35 @@
+#burger {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+  &:checked {
+    & ~ .sidebar {
+			transform: translate3d(0, 0, 0);
+			box-shadow: 0 0 10px rgba(black,.7);
+		}
+		& ~ .burger{
+			transform: translate3d(250px, 0, 0);
+		}
+  }
+}
+.burger{
+	position: fixed;
+	display: none;
+	width: 30px;
+	height: 30px;
+	top: 10px;
+	left: 10px;
+	transform: translate3d(0, 0, 0);
+	transition: all .4s;
+	&-line{
+		position: relative;
+		width: 100%;
+		height: 3px;
+		background: black;
+	}
+	@include phones{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}

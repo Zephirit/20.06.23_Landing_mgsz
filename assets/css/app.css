@@ -108,6 +108,47 @@ body, html {
   background: #dee0e3;
 }
 
+#burger {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+#burger:checked ~ .sidebar {
+  transform: translate3d(0, 0, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#burger:checked ~ .burger {
+  transform: translate3d(250px, 0, 0);
+}
+
+.burger {
+  position: fixed;
+  display: none;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+  transform: translate3d(0, 0, 0);
+  transition: all .4s;
+}
+
+.burger-line {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: black;
+}
+
+@media (max-width: 1439px) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .goods {
   position: relative;
   min-height: 300px;
@@ -116,7 +157,15 @@ body, html {
 
 .container {
   position: relative;
-  margin-left: 200px;
+  width: calc($sidebar-width + 1200px);
+  margin-left: 240px;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    width: 1200px;
+    margin: auto;
+  }
 }
 
 .sidebar {
@@ -124,9 +173,163 @@ body, html {
   z-index: 999;
   top: 0;
   left: 0;
-  min-height: 100%;
-  width: 200px;
+  height: 100vh;
+  width: 240px;
   background: #dee0e3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0;
+}
+
+@media (max-width: 1439px) {
+  .sidebar {
+    transform: translate3d(-100%, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
+}
+
+.sidebar__logo {
+  position: relative;
+  padding: 15px 10px;
+}
+
+.sidebar__svg {
+  position: relative;
+  width: 100%;
+  opacity: 0.3;
+}
+
+.sidebar__place {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__place span {
+  font-size: 12px;
+  font-family: "NoirPro";
+  font-weight: 500;
+  color: #729ccf;
+  text-transform: uppercase;
+  padding: 7px 30px;
+}
+
+.sidebar__place a {
+  font-size: 20px;
+  font-family: "NoirPro";
+  font-weight: 500;
+  color: #254777;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 7px 30px;
+}
+
+.sidebar__call a {
+  font-size: 12px;
+  font-family: "NoirPro";
+  font-weight: 500;
+  color: #cf001f;
+  text-decoration: underline;
+  text-transform: uppercase;
+  line-height: 4;
+  padding: 7px 30px;
+}
+
+.sidebar__type {
+  position: relative;
+  display: none;
+  padding: 15px 30px;
+  font-size: 15px;
+  font-family: "NoirPro";
+  color: #254777;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sidebar__type:after {
+  content: "";
+  position: absolute;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 -1px 1px rgba(255, 255, 255, 0.3);
+  left: -3px;
+  width: calc(100% + 6px);
+  height: 1px;
+}
+
+.sidebar__type:after {
+  bottom: -0.5px;
+}
+
+.sidebar__category label h3 {
+  position: relative;
+  padding: 20px 30px;
+  margin: 0;
+  background: #d6d6d6;
+  -webkit-user-select: none;
+          user-select: none;
+  font-size: 14px;
+  font-family: "NoirPro";
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sidebar__category input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.sidebar__category input[type="checkbox"]:checked ~ .sidebar__type {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__other {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 30px;
+}
+
+.sidebar__other img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: invert(100%);
+}
+
+.sidebar__other span {
+  font-size: 14px;
+  font-family: "NoirPro";
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.sidebar__icon {
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+
+.sidebar__calc {
+  position: relative;
+  background-color: #285087;
+}
+
+.sidebar__price {
+  position: relative;
+  background-color: #cf001f;
 }
 
 .navigation {
@@ -149,12 +352,62 @@ body, html {
 
 footer {
   position: relative;
-  background-color: black;
-  color: #dee0e3;
+  background-color: white;
+  color: #254777;
   flex: 0 0 auto;
 }
 
 .footer {
-  min-height: 300px;
-  text-align: center;
+  width: 1170px;
+  height: auto;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 42px 0;
+}
+
+.footer__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column__name {
+  position: relative;
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+}
+
+.footer-column__lines {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 2.154;
+  text-transform: uppercase;
+}
+
+.footer__bottom {
+  position: relative;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efefef;
 }

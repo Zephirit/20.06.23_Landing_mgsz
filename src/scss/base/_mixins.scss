@@ -25,12 +25,17 @@
 }
 // Адаптивность
 @mixin desktop {
-    @media (min-width: 768px) {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+@mixin tablets {
+    @media (min-width: 768px) and (max-width: 1439px) {
         @content;
     }
 }
 @mixin phones {
-    @media (max-width: 767px) {
+    @media (max-width: 1439px) {
         @content;
     }
 }
