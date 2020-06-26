@@ -1,0 +1,87 @@
+.pdfs{
+	position: relative;
+	z-index: 1;
+	width: 455px;
+	height: 570px;
+	background: white;	
+	margin-bottom: 80px;
+	@include phones {
+		width: 275px;
+		height: 345px;
+	}
+	@include tablets {
+		width: 350px;
+		height: 440px;
+		margin-top: 25px;
+	}
+	
+	&:before{
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: white;
+		box-shadow: 0 0 20px rgba(black,.2);
+		top: -22px;
+		left: 22px;
+		@include phones {
+			top: -12px;
+		left: 12px;
+		}
+	}
+	& .glide{
+		position: relative;
+		width: 100%;
+		background: white;
+		height: 100%;
+		padding: 40px;
+		box-shadow: 0 0 20px rgba(black,.2);
+		&__track{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			border: 1px solid #729ccf;
+		}
+		&-slide{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__slider{
+		position: relative;
+		width: 100%;
+		width: 100%;
+		height: 100%;
+		
+	}
+	&__slides{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+	}
+	&__controllers{
+		position: relative;
+		padding: 60px 15px 0;
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+.pdf{
+	position: relative;
+	width: 100%;;
+	height: 100%;
+	&__image{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		& img{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+	}
+}

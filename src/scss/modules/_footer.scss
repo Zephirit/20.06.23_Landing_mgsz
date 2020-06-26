@@ -21,6 +21,11 @@ footer {
     width: 1170px;
     margin: auto;
     padding: 40px 15px 0;
+    box-sizing: border-box;
+    @include phones {
+      width: 100%;
+      padding: 20px 15px 0;
+    }
   }
   &__top {
     position: relative;
@@ -38,11 +43,21 @@ footer {
     display: flex;
     flex-direction: column;
     width: 25%;
+    @include phones {
+        width: 35%;
+      }
+    @include tablets {
+      width: 200px;
+    }
+
   }
   &__logo {
     position: relative;
     margin: 15px 0 25px;
     width: 220px;
+    @include phones {
+        width: 100%;
+      }
     & img {
       width: 100%;
       height: 100%;
@@ -61,17 +76,46 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @include tablets {
+      // margin: 0 15px;
+    }
+   
     &:first-child {
       width: 25%;
+      
+      
     }
     &:nth-child(2) {
       width: 15%;
+      @include phones {
+        width: auto;
+      }
+      @include tablets {
+        width: auto;
+      }
+      
     }
     &:nth-child(3) {
       width: 25%;
+      @include phones {
+        display: none;
+      }
+      @include tablets {
+        display: flex;
+        width: auto;
+      }
+    }
+    &:nth-child(4) {
+      // width: 25%;
+      @include phones {
+        display: none;
+      }
     }
     &:last-child {
       width: 25%;
+      @include phones {
+        display: none;
+      }
     }
     &__name {
       position: relative;
@@ -95,16 +139,22 @@ footer {
     position: relative;
     width: 100%;
     height: 65px;
-    display: flex;
-    
+    display: flex;    
     align-items: center;
     color: $mainColor;
     font-weight: normal;
+    box-sizing: border-box;
+    
     &-columns {
       position: relative;
       display: flex;
       width: 100%;
       justify-content: space-between;
+      box-sizing: border-box;
+      @include phones {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       & a {
         color: #729ccf;
       }
@@ -118,17 +168,33 @@ footer {
       z-index: -1;
     }
   }
-  &__company {
+  &__company, &__politics, &__year  {
     width: 25%;
+    @include phones {
+      width: 100%;
+      text-align: center;
+    }
+    @include tablets {
+      width: 50%;
+      text-align: center;
+    }
   }
   &__requisites {
     width: 15%;
+    @include phones {
+      width: 100%;
+      text-align: center;
+    }
+    @include tablets {
+      width: 50%;
+      text-align: center;
+    }
   }
   &__politics {
-    width: 25%;
-  }
-  &__year {
-    width: 25%;
+    @include tablets {
+      order: -1;
+    }
   }
 }
+
 

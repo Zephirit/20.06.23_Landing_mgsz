@@ -1,21 +1,33 @@
 nav.navigation#navigation
 	.navigation__menu
 		ul.navigation__list
-			li.navigation__item
-				a(href="")
+			li.navigation__item.for-active
+				a(href="/about")
 					span О компании
-					span >
+					+arrow('arrow--right')
+				ul.navigation__sublist
+					li.navigation__subitem
+						a(href="#")
+							span Новости компании
+					+square-small-blue
+					li.navigation__subitem
+						a(href="#")
+							span Новости рынка металлов
+					+square-small-blue
+					li.navigation__subitem
+						a(href="#")
+							span Наши клиенты
 			li.navigation__item
-				a(href="")
+				a(href="#")
 					span Клиенты
 			li.navigation__item
-				a(href="")
+				a(href="/gallery.html")
 					span Галерея
 			li.navigation__item
-				a(href="")
+				a(href="#")
 					span Полезное
 			li.navigation__item
-				a(href="")
+				a(href="/contacts")
 					span Контакты
 		button.navigation__tick
 			.navigation__img

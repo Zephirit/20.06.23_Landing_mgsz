@@ -7,7 +7,7 @@ mixin contact(title,address,tel,phone,mail,link)
 		a(href=`tel:${tel}`).contact__phone
 			img(src="./assets/images/phone-call.png", alt="address")
 			span=phone
-		.contact__address
+		a(href=`email:${email}`).contact__address.contact__email
 			img(src="./assets/images/envelope.png", alt="address")
 			span=mail
 		button.contact__link

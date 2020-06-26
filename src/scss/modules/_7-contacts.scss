@@ -2,6 +2,7 @@
 	position: relative;
 	width: 100%;
 	background: white;
+	z-index: 5;
 
 	&__content {
 		position: relative;
@@ -10,6 +11,9 @@
 		margin: auto;
 		padding: 40px 15px;
 		box-sizing: border-box;
+		@include phones {
+			padding: 20px 15px 0;
+		}
 	}
 
 	&__heading {
@@ -20,11 +24,21 @@
 
 	&__title {
 		position: relative;
-		width: 390px;
-		margin-right: 100px;
+		display: inline;
+		width: 350px;
+		margin-right: 40px;
 		font-size: 60px;
 		font-weight: 700;
 		text-transform: uppercase;
+	}
+	&__subtitle {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		color: #729ccf;
+		// margin-left: 30px;
+		text-transform: uppercase;
+		font-size: 14px; 
 	}
 
 	&__maps {
@@ -33,13 +47,28 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		margin-bottom: 50px;
+		// margin-bottom: 50px;
 	}
 	&__piece{
 		position: relative;
-		width: 50%;
-		
+		width: 50%;		
 		min-height: 100px;
+		&:nth-child(3) {
+			margin: 10px 0;
+		}
+		&:nth-child(4) {
+			margin: 10px 0;
+		}
+		@include phones {
+			width: 100%;
+			box-sizing: border-box;
+			// padding: 15px;	
+		}
+		@include tablets {
+			width: 50%;
+			box-sizing: border-box;
+			// padding: 15px;	
+		}
 	}
 	&__data{
 		position: relative;
@@ -47,11 +76,20 @@
 		padding: 30px 0;
 		display: flex;
 		justify-content: center;
+		@include phones {
+			padding: 15px 0;	
+		}
 		&.sp-office{
 			order: 1;
 		}
 		&.sp-stock{
 			order: 4;
+			@include phones {
+				order: 3;
+			}
+			@include tablets {
+				order: 4;
+			}
 		}
 		&.msk-stock{
 			order: 5;
@@ -67,13 +105,19 @@
 			object-fit: cover;
 		}
 		&.sp-office{
-			order: 2
+			order: 2;
 		}
 		&.sp-stock{
-			order: 3
+			order: 3;
+			@include phones {
+				order: 4;
+			}
+			@include tablets {
+				order: 3;
+			}
 		}
 		&.msk-stock{
-			order: 6
+			order: 6;
 		}
 	}
 }

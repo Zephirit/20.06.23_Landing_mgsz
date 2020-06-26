@@ -1,68 +1,189 @@
-.navigation{
-	position: relative;
-	height: 65px;
-	background: #254777;
-	color: white;
-	&__menu{
+.navigation {
+  position: relative;
+  height: 65px;
+  background: #254777;
+  color: white;
+  &__menu {
+    position: relative;
+    width: 1170px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list {
 		position: relative;
-		width: 1170px;
-		margin: auto;
-		height: 100%;
-		display: flex;
-		justify-content: space-between;
+		
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
 		align-items: center;
-	}
-	&__list{
+		@include phones{
+			padding: 10px 0;
+			box-sizing: border-box;
+		}
+  }
+  &__item {
 		position: relative;
-		width: 100%;
-		height: 100%;
+		cursor: pointer;
+		user-select: none;
 		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-	}
-	&__item{
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
+		flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 		height: 100%;
-		& a{
+		transition: .4s;
+    @include phones {
+			height: auto;
+			box-sizing: border-box;
+			align-items: flex-start;
+			padding: 20px 30px;
+			text-align: left;
+			width: 100%;
+    }
+    & > a {
+			position: relative;
+			display: flex;
+			align-items: center;
 			text-decoration: none;
+			text-transform: uppercase;
+			white-space: nowrap;
 			color: white;
-			& span{
-				&:nth-child(2){
-					padding: 0 5px;
-				}
+			transition: .4s;
+			&:hover{
+				color: #6c92c3;
+				text-decoration: underline;
+			}
+      & > svg {
+				padding: 0 10px;
+				stroke: #6c92c3;
+				transition: .4s;
+      }
+		}
+		&:hover,&:focus{
+			background: #203c63;
+			& > a{
+				color: #6c92c3;
+			}
+			& .navigation__sublist{
+				display: flex;
+			}
+			& svg{
+				transform: rotate(-180deg);
+			}
+		}
+  }
+  &__sublist {
+		position: absolute;
+		z-index: 899;
+		top: 65px;
+		left: 0;
+		display: none;
+		background: #1d395f;
+    justify-content: space-between;
+		align-items: center;
+		animation: fadeInDown .4s;
+		@include phones{
+			position: relative;
+			width: 100%;
+			margin: 10px 0 0;
+			flex-direction: column;
+			background: #203c63;
+			align-items: flex-start;
+			z-index: 0;
+			top: 0;
+			animation: slideInRight .4s;
+		}
+		& .square-small-blue{
+			position: relative;
+			margin: 20px;
+			top: 0;
+			left: 0;
+			@include phones{
+				display: none;
 			}
 		}
 	}
-	&__tick {
+	&__subitem{
 		position: relative;
-		width: 25%;
-		height: 100%;
-		background: #cf001f;
-		border: none;
-		outline: none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		& span{
-			position: relative;
-			padding: 10px;
-			color: white;
-		}
-	}
-	&__img{
-		position: relative;
-		width: 25px;
-		height: 25px;
-		padding: 10px;
-		& img{
-			position: relative;
+		padding: 30px 40px;
+		@include phones{
 			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			padding: 10px;
 		}
+		& > a {
+			text-decoration: none;
+			white-space: nowrap;
+			text-transform: uppercase;
+			color: white;
+			transition: .4s;
+			&:hover{
+				color: #6c92c3;
+				text-decoration: underline;
+			}
+			@include phones{
+				font-size: 14px;
+				white-space: inherit;
+			}
+		}
+		
 	}
+  &__tick {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    background: #cf001f;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include phones {
+      height: 65px;
+    }
+    & span {
+      position: relative;
+      padding: 10px;
+      color: white;
+    }
+  }
+  &__img {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    & img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @include phones {
+		position: fixed;
+    z-index: 999;
+    right: 0;
+    width: 240px;
+    height: 100%;
+    &__menu {
+      width: 240px;
+      height: auto;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &__list {
+      flex-direction: column;
+    }
+    &__tick {
+      width: 100%;
+    }
+    transform: translate3d(100%, 0, 0);
+    box-shadow: 0 0 0 rgba(black, 0.1);
+    transition: all 0.4s;
+  }
 }

@@ -1,0 +1,9 @@
+mixin news(number,name,text,date)
+	.news__item
+		.news__img
+			img(src=`./assets/images/news_${number}.jpg`, alt=`news_${number}`)
+		.news__date=date
+		.news__name=name
+		.news__text=text
+		.news__more
+			a(href='') Подробнее

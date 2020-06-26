@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Подраздел</title>
+    <meta content="SM-group" name="author">
+    <meta content="description" name="description">
+    <meta content="prepros" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/hover-min.css">
+    <link rel="stylesheet" href="./assets/libraries/glide-3.4.1/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="./assets/css/app.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="checkbox" id="burger">
+      <label class="burger" for="burger">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+      </label>
+      <sidebar class="sidebar">
+        <div class="sidebar__logo"><img class="sidebar__svg" src="./assets/images/logo.png"></div>
+        <div class="sidebar__phones">
+          <div class="sidebar__place"><span>Санкт-Петербург</span><a href="tel:88124481348">8 (812) 448-13-48</a></div>
+          <div class="sidebar__place"><span>Москва</span><a href="tel:84996537548">8 (499) 653-75-48</a></div>
+        </div>
+        <div class="sidebar__call"><a href="#">Заказать звонок</a></div>
+        <div class="sidebar__rolling sidebar__category">
+          <input type="checkbox" id="rolling">
+          <label for="rolling">
+            <h3>Металлопрокат</h3>
+          </label>
+              <div class="sideType">
+                <input type="checkbox" id="tube">
+                <label for="tube"><span>Трубы и фасонные изделия</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="fastener">
+                <label for="fastener"><span>Метизы</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sheet">
+                <label for="sheet"><span>Листовой прокат</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sort">
+                <label for="sort"><span>Сортовой прокат</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="dowel">
+                <label for="dowel"><span>Шпунn</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="strip">
+                <label for="strip"><span>Полособульб</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="forging">
+                <label for="forging"><span>Поковки</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+        </div>
+        <div class="sidebar__construct sidebar__category">
+          <input type="checkbox" id="construct">
+          <label for="construct">
+            <h3>Металлоконструкции</h3>
+          </label>
+              <div class="sideType">
+                <input type="checkbox" id="tube2">
+                <label for="tube2"><span>Трубы и фасонные изделия</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="fastener2">
+                <label for="fastener2"><span>Метизы</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sheet2">
+                <label for="sheet2"><span>Листовой прокат</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sort2">
+                <label for="sort2"><span>Сортовой прокат</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="dowel2">
+                <label for="dowel2"><span>Шпунn</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="strip2">
+                <label for="strip2"><span>Полособульб</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="forging2">
+                <label for="forging2"><span>Поковки</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+        </div>
+        <div class="sidebar__serv sidebar__category">
+          <input type="checkbox" id="serv">
+          <label for="serv">
+            <h3>Услуги</h3>
+          </label>
+              <div class="sideType">
+                <input type="checkbox" id="tube3">
+                <label for="tube3"><span>Трубы и фасонные изделия</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="fastener3">
+                <label for="fastener3"><span>Метизы</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sheet3">
+                <label for="sheet3"><span>Листовой прокат</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="sort3">
+                <label for="sort3"><span>Сортовой прокат</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
+                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="dowel3">
+                <label for="dowel3"><span>Шпунn</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="strip3">
+                <label for="strip3"><span>Полособульб</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+              <div class="sideType">
+                <input type="checkbox" id="forging3">
+                <label for="forging3"><span>Поковки</span>
+                      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg>
+                </label>
+                <ul class="sideType__list">
+                </ul>
+              </div>
+        </div>
+        <div class="sidebar__calc sidebar__other">
+          <div class="sidebar__icon"><img src="./assets/images/calculator.png" alt="calculator"></div><span>Калькулятор</span>
+        </div>
+        <div class="sidebar__price sidebar__other">
+          <div class="sidebar__icon"><img src="./assets/images/copy.png" alt="copy"></div><span>Скачать прайс-лист</span>
+        </div>
+      </sidebar>
+      <div class="container">
+        <nav class="navigation" id="navigation">
+          <div class="navigation__menu">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a href=""><span>О компании</span><span>></span></a></li>
+              <li class="navigation__item"><a href=""><span>Клиенты</span></a></li>
+              <li class="navigation__item"><a href=""><span>Галерея</span></a></li>
+              <li class="navigation__item"><a href=""><span>Полезное</span></a></li>
+              <li class="navigation__item"><a href=""><span>Контакты</span></a></li>
+            </ul>
+            <button class="navigation__tick">
+              <div class="navigation__img"><img src="./assets/images/tick.png" alt="order"></div><span>Оставить заявку</span>
+            </button>
+          </div>
+        </nav>
+            <div class="search" id="search">
+              <div class="search__input">
+                    <div class="square-small-blue">
+                      <div class="square-small-blue__inner"></div>
+                    </div>
+                <input type="text">
+                <label>Что вы ищите?</label>
+                <div class="search__magnify"><img src="./assets/images/magnifying-glass.png" alt="magnifying-glass"></div>
+              </div>
+            </div>
+            <div class="form">
+              <div class="form__bg"><img src="./assets/images/form_lg.jpg" alt="Фон формы"></div>
+              <div class="form__content">
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="form__heading">
+                  <div class="form__title">Оставьте заявку</div>
+                  <div class="form__subtitle">и наши менеджеры оперативно ответят вам!</div>
+                </div>
+                <div class="form__body">
+                  <div class="form__body-top">
+                    <input type="name" placeholder="Ваше имя">
+                    <input type="phone" placeholder="Телефон">
+                    <input type="email" placeholder="Электронная почта">
+                  </div>
+                  <div class="form__body-bottom">
+                    <div class="form__body-message">
+                      <input type="textarea" placeholder="Текст сообщения">
+                    </div>
+                    <div class="form__body-submit">
+                      <div class="form__body-check">
+                        <div class="form__body-checker">
+                          <input type="checkbox">
+                        </div>
+                        <div class="form__body-text">Я подтверждаю, что ознакомлен(а) и согласен(на) с условиями<a href="">Передачи информации</a></div>
+                      </div>
+                      <button class="form__button">
+                        <div class="form__button-icon"><img src="./assets/images/form_button.png" alt="Отправить"></div>
+                        <div class="form__button-text">Отправить</div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <section class="section contacts" id="contacts">
+          <div class="contacts__content">
+                <div class="square-large-blue">
+                  <div class="square-large-blue__inner"></div>
+                </div>
+            <div class="contacts__heading"><span class="contacts__title">Контакты</span><a class="contacts__subtitle" href="">Подробнее о контактах</a></div>
+          </div>
+          <div class="contacts__maps">
+            <div class="contacts__piece contacts__data sp-office">
+                  <div class="contact">
+                    <h3 class="contact__title">офис в санкт-петербурге</h3>
+                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
+                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                  </div>
+            </div>
+            <div class="contacts__piece contacts__map sp-office"><img src="./assets/images/sp-office.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__data sp-stock">
+                  <div class="contact">
+                    <h3 class="contact__title">склад в санкт-петербурге</h3>
+                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
+                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                  </div>
+            </div>
+            <div class="contacts__piece contacts__map sp-stock"><img src="./assets/images/sp-stock.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__data msk-stock">
+                  <div class="contact">
+                    <h3 class="contact__title">склад в москве</h3>
+                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>Карачарово, ул. Стахановская, д. 19</span></div><a class="contact__phone" href="tel: 84996537548"><img src="./assets/images/phone-call.png" alt="address"><span> 8 (499) 653-75-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
+                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                  </div>
+            </div>
+            <div class="contacts__piece contacts__map msk-stock"><img src="./assets/images/msk-stock.jpg" alt="sp-office"></div>
+          </div>
+        </section>
+        <footer class="animated rubberBand">
+          <div class="footer">
+            <div class="footer__content">
+              <div class="footer__top">
+                <div class="footer__image">
+                  <div class="footer__logo"><img src="./assets/images/logo.png" alt="logo"></div><a class="footer__calc-metal" href="">Калькулятор металлопроката</a><a class="footer__calc-tube" href="">Трубный калькулятор</a>
+                </div>
+                    <div class="footer-column">
+                          <div class="square-small-blue">
+                            <div class="square-small-blue__inner"></div>
+                          </div>
+                      <div class="footer-column__name">Компания</div>
+                      <div class="footer-column__lines">
+                        <div class="footer-column__line">Наши клиенты</div>
+                        <div class="footer-column__line">Наши объекты</div>
+                        <div class="footer-column__line">Наш склад</div>
+                        <div class="footer-column__line">Госты</div>
+                        <div class="footer-column__line">Спецпредложения</div>
+                        <div class="footer-column__line">Контакты</div>
+                        <!-- .footer-column__line.footer-column__line2=line2-->
+                        <!-- .footer-column__line.footer-column__line3=line3-->
+                        <!-- .footer-column__line.footer-column__line4=line4-->
+                        <!-- .footer-column__line.footer-column__line5=line5-->
+                        <!-- .footer-column__line.footer-column__line6=line6-->
+                        <!-- .footer-column__line.footer-column__line7=line7-->
+                      </div>
+                    </div>
+                    <div class="footer-column">
+                          <div class="square-small-blue">
+                            <div class="square-small-blue__inner"></div>
+                          </div>
+                      <div class="footer-column__name">Металлоконструкции</div>
+                      <div class="footer-column__lines">
+                        <div class="footer-column__line">Закладные детали</div>
+                        <div class="footer-column__line">Сетки-каркасы</div>
+                        <div class="footer-column__line">Производство плоских каркасов</div>
+                        <div class="footer-column__line">Производство объемных каркасов</div>
+                        <div class="footer-column__line">Полезная информация</div>
+                        <!-- .footer-column__line.footer-column__line2=line2-->
+                        <!-- .footer-column__line.footer-column__line3=line3-->
+                        <!-- .footer-column__line.footer-column__line4=line4-->
+                        <!-- .footer-column__line.footer-column__line5=line5-->
+                        <!-- .footer-column__line.footer-column__line6=line6-->
+                        <!-- .footer-column__line.footer-column__line7=line7-->
+                      </div>
+                    </div>
+                    <div class="footer-column">
+                          <div class="square-small-blue">
+                            <div class="square-small-blue__inner"></div>
+                          </div>
+                      <div class="footer-column__name">Услуги</div>
+                      <div class="footer-column__lines">
+                        <div class="footer-column__line">Изоляция ППУ</div>
+                        <div class="footer-column__line">Изоляция труб ВУС 5</div>
+                        <div class="footer-column__line">Оцинкование металла</div>
+                        <div class="footer-column__line">Грунтовка</div>
+                        <div class="footer-column__line">Резка металла</div>
+                        <div class="footer-column__line">Доставка</div>
+                        <div class="footer-column__line">Погрузочно-разгрузочные работы</div>
+                        <!-- .footer-column__line.footer-column__line2=line2-->
+                        <!-- .footer-column__line.footer-column__line3=line3-->
+                        <!-- .footer-column__line.footer-column__line4=line4-->
+                        <!-- .footer-column__line.footer-column__line5=line5-->
+                        <!-- .footer-column__line.footer-column__line6=line6-->
+                        <!-- .footer-column__line.footer-column__line7=line7-->
+                      </div>
+                    </div>
+              </div>
+              <div class="footer__bottom">
+                <div class="footer__bottom-columns">
+                  <div class="footer__company">ООО "МеталлГрупп Северо-Запад"</div><a class="footer__requisites" href="">Реквизиты организации</a><a class="footer__politics" href="">Политика конфиденциальности</a>
+                  <div class="footer__year">2010-2020. Все права защищены.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom-bg"></div>
+        </footer>
+      </div>
+    </div>
+    <script src="./assets/libraries/glide-3.4.1/dist/glide.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

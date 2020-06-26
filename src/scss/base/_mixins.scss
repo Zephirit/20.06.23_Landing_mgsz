@@ -6,6 +6,105 @@
         clear: both;
     }
 }
+@mixin ripple($color:black, $height:200%) {
+    user-select: none;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:not(:active) {
+        &:before {
+            content: '';
+            @include centered();
+            z-index: 999;
+            width: 110%;
+            height: $height;
+            background: transparent;
+            border-radius: 50%;
+            transition: all .3s ease-out;
+        }
+    }
+
+    &:active {
+        &:before {
+            content: '';
+            @include centered();
+            border-radius: 50%;
+            background: rgba($color,.3);
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
+@mixin wave($color:black, $axis:'x') {
+    user-select: none;
+    overflow: hidden;
+    cursor: pointer;
+
+    @if $axis=='x' {
+        &:not(:active) {
+            &:before {
+                content: '';
+                position: absolute;
+                left: 200%;
+                top: 0;
+                width: 200%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba($color,.2), transparent);
+                transition: all .5s ease-out;
+            }
+        }
+
+        &:active {
+            &:before {
+                content: '';
+                left: -200%;
+            }
+        }
+    }
+    @if $axis=='-x' {
+        &:not(:active) {
+            &:before {
+                content: '';
+                position: absolute;
+                left: -200%;
+                top: 0;
+                width: 200%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba($color,.2), transparent);
+                transition: all .5s ease-out;
+            }
+        }
+
+        &:active {
+            &:before {
+                content: '';
+                left: 200%;
+            }
+        }
+    }
+    @if $axis=='y' {
+        &:not(:active) {
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 200%;
+                width: 100%;
+                height: 200%;
+                background: linear-gradient(transparent, rgba($color,.2), transparent);
+                transition: all .5s ease-out;
+            }
+        }
+
+        &:active {
+            &:before {
+                content: '';
+                top: -200%;
+            }
+        }
+    }
+}
 // Центрирование элемента
 @mixin centered($axis:'both') {
     position: absolute;
@@ -25,17 +124,22 @@
 }
 // Адаптивность
 @mixin desktop {
-    @media (min-width: 1440px) {
+    @media (min-width: 1199px) {
         @content;
     }
 }
 @mixin tablets {
-    @media (min-width: 768px) and (max-width: 1439px) {
+    @media (min-width: 768px) and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin no-sidebar {
+    @media (max-width: 1439px) {
         @content;
     }
 }
 @mixin phones {
-    @media (max-width: 1439px) {
+    @media (max-width: 1199px) {
         @content;
     }
 }

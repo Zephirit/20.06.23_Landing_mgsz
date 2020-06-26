@@ -35,15 +35,42 @@
 	background-color: #729ccf;
 	left: -45px;
 	top: -30px;
+	@include phones {
+		// display: none;
+		height: 40px;
+		width: 40px;
+		left: auto;
+		top: 15px;
+		right: 15px;
+	}
 	&__inner {
 		position: relative;
 		margin: 15px;
 		height: 30px;
 		width: 30px;
 		background-color: white; 
+		@include phones {
+			margin: 12px;
+			height: 16px;
+			width: 16px;
+		}
 	}
 }
-
+.square-medium-red {
+	position: absolute;
+	height: 32px;
+	width: 32px;
+	background-color: $contrColor;
+	left: 0;
+	top: 0;
+	&__inner {
+		position: relative;
+		margin: 8px;
+		height: 16px;
+		width: 16px;
+		background-color: white; 
+	}
+}
 .square-small-red {
 	position: absolute;
 	height: 15px;

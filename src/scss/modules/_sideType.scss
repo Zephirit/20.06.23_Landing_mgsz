@@ -1,56 +1,158 @@
 .sideType {
-	position: relative;
-	display: none;
-	padding: 15px 30px;
-	font-size: 15px;
-	font-family: "NoirPro";
-	color: rgb(37, 71, 119);
-	font-weight: bold;
-	text-transform: uppercase;
-	&:after {
-		content: "";
-		position: absolute;
-		box-shadow: 0 1px 1px rgba(black, 0.3),
-			0 -1px 1px lighten(rgba($backColor, 0.3), 20%);
-		left: -3px;
-		width: calc(100% + 6px);
-		height: 1px;
-	}
+  position: relative;
 
-	&:after {
-		bottom: -0.5px;
-	}
-	& label{
-		& span{
-			&:last-child{
-				position: relative;
-				padding: 0 5px;
-				letter-spacing: 1px;
-				writing-mode: horizontal-tb;
-			}
-		}
-	}
-	&__list{
-		position: relative;
-		display: none;
-	}
-	& input[type="checkbox"] {
+  font-size: 15px;
+  font-family: "NoirPro";
+  color: rgb(37, 71, 119);
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:after {
+    content: "";
+    position: absolute;
+    box-shadow: 0 1px 1px rgba(black, 0.3),
+      0 -1px 1px lighten(rgba($backColor, 0.3), 20%);
+    left: -3px;
+    width: calc(100% + 6px);
+    height: 1px;
+  }
+
+  &:after {
+    bottom: -0.5px;
+  }
+  &__title {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    @include wave(white);
+    transition: .4s;
+    &:after{
+      content: '';
       position: absolute;
-      z-index: -1;
-      opacity: 0;
-      &:checked {
-        & ~ .sideType__list {
-          display: flex;
-          flex-direction: column;
-		  }
-		  & ~ label{
-			& span{
-				&:last-child{
-					writing-mode: vertical-lr;
-					
-				}
-			}
-		}
+      margin-top: -6px;
+      top: 50%;
+      display: none;
+      left: 10px;
+      width: 6px;
+      height: 6px;
+      border: 3px solid #6a8cba;
+    }
+    & svg {
+      position: relative;
+      padding: 2px;
+      transition: .4s;
+    }
+  }
+  &__list {
+    position: relative;
+    padding: 0 30px 15px;
+    display: none;
+    animation: fadeInLeft 0.4s;
+  }
+  &__title.selected {
+    background: #254777;
+    color: white;
+    &:after{
+      display: block;
+      animation: flip .4s;
+    }
+    & ~ .sideType__list {
+      display: flex;
+      flex-direction: column;
+      background: #254777;
+    }
+    & svg {
+      stroke: #6a8cba;
+      transform: scale(1, -1);
+    }
+  }
+  &__item {
+    padding: 7px 0;
+    & .sideType__title {
+      position: relative;
+      padding: 0;
+      
+      & span {
+        position: relative;
+
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "NoirPro";
+        font-weight: 500;
+        color: rgb(151, 188, 232);
+        text-transform: uppercase;
+      }
+      & svg {
+        position: relative;
+        padding: 2px;
+      }
+      &.selected {
+        & ~ .sideTypeSub__list {
+          display: block;
+        }
       }
     }
+  }
+
+  &Sub {
+    &__title {
+      position: relative;
+      padding: 0;
+      user-select: none;
+      cursor: pointer;
+      & span {
+        position: relative;
+
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "NoirPro";
+        font-weight: 500;
+        color: rgb(151, 188, 232);
+        text-transform: uppercase;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      & svg {
+        position: relative;
+        padding: 2px;
+        stroke: rgb(151, 188, 232);
+        transition: all 0.4s;
+      }
+      &.selected {
+        & ~ .sideTypeSub__list {
+          display: block;
+        }
+        & svg {
+          transform: scale(1, -1);
+        }
+      }
+    }
+    &__list {
+      position: relative;
+      padding: 10px 0px;
+      display: none;
+      animation: fadeInLeft 0.4s;
+    }
+    &__item {
+      position: relative;
+      padding: 5px 0px;
+      &:hover{
+        text-decoration: underline;
+      }
+      & a {
+        user-select: none;
+        font-size: 16px;
+        font-family: "NoirPro";
+        color: rgb(255, 255, 255);
+        font-weight: 300;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

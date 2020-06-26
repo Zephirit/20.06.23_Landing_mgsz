@@ -13,6 +13,7 @@ $contrColor: #cf001f;
 // Страницы
 @import "./pages/index.scss";
 // Модули
+// Главная стриница
 @import "./modules/_1-goods.scss";
 @import "./modules/_2-products.scss";
 @import "./modules/_3-services.scss";
@@ -20,12 +21,43 @@ $contrColor: #cf001f;
 @import "./modules/_5-reviews.scss";
 @import "./modules/_6-news.scss";
 @import "./modules/_7-contacts.scss";
+// Страница Каталог
+@import "./modules/_11-catalog.scss";
+// Страница О компании
+@import "./modules/_21-about.scss";
+@import "./modules/_22-clients.scss";
+@import "./modules/_23-reviews.scss";
+@import "./modules/_24-more.scss";
+@import "./modules/_25-advantages.scss";
+@import "./modules/_26-logic.scss";
+@import "./modules/_27-stock.scss";
+// Страница Контакты
+@import "./modules/_31-menu.scss";
+@import "./modules/_32-requisite.scss";
+// Страница Галерея
+@import "./modules/_41-gallery.scss";
+// Страница Карточка
+@import "./modules/_51-card.scss";
+@import "./modules/_52-price.scss";
+@import "./modules/_53-description.scss";
+@import "./modules/_54-recomend.scss";
+// Страница Новости
+@import "./modules/_61-news.scss";
+// Страница Подраздел
+@import "./modules/_71-subsection.scss";
+@import "./modules/_72-price.scss";
+@import "./modules/_73-text.scss";
+
 
 @import "./modules/_contact.scss";
+@import "./modules/_pdf.scss";
+@import "./modules/_controllers.scss";
+@import "./modules/_arrow.scss";
 @import "./modules/_oft.scss";
 @import "./modules/_search.scss";
 @import "./modules/_sideType.scss";
 @import "./modules/_burger.scss";
+@import "./modules/_navburger.scss";
 @import "./modules/_sertificates.scss";
 @import "./modules/_form.scss";
 @import "./modules/_sidebar.scss";
@@ -33,3 +65,4 @@ $contrColor: #cf001f;
 @import "./modules/_header.scss";
 @import "./modules/_footer.scss";
 @import "./modules/_square.scss";
+@import "./modules/_title.scss";

@@ -1,0 +1,96 @@
+.controllers {
+	position: relative;
+	display: flex;
+	align-items: center;
+	&__quant{
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		margin: 0 30px;
+		opacity: .8;
+	}
+	&__slide {
+		font-size: 48px;
+		font-family: "NoirPro";
+		font-weight: 300;
+		color: #729ccf;
+		margin: 0 7px;
+		@include phones {
+			font-size: 36px;
+		}
+	}
+
+	&__from {
+		font-size: 22px;
+		font-family: "NoirPro";
+		color: #254777;
+		margin:  6px;
+	}
+
+	&__all {
+		font-size: 30px;
+		font-family: "NoirPro";
+		color: #254777;
+		margin: 2px;
+		@include phones {
+			font-size: 18px;
+			margin: 4px;
+		}
+	}
+
+	&__arrows {
+		position: relative;
+		display: flex;
+		box-shadow: -5px 20px 20px rgba(black,.1);
+		@include phones {
+			height: 30px;
+		}
+		@include tablets {
+			height: 50px;
+		}
+
+		& button {
+			position: relative;
+			width: 60px;
+			height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: white;
+			box-shadow: 0;
+			border: 0;
+			@include phones {
+				width: 30px;
+				height: 100%;
+			}
+			@include tablets {
+				width: 50px;
+				height: 100%;
+			}
+
+			&:focus {
+				border: 0;
+				outline: 0;
+			}
+
+			@include wave(#729ccf);
+
+			&:first-child {
+				@include wave(#729ccf, '-x');
+			}
+		}
+	}
+	&--white{
+		& .controllers__slide {
+			color: white;
+		}
+	
+		& .controllers__from {
+			color: #729ccf;
+		}
+	
+		& .controllers__all {
+			color: #729ccf;
+		}
+	}
+}

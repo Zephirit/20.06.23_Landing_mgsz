@@ -1,0 +1,13 @@
+//- Наследуемый шаблон _template
+extends ./templates/_template
+block variables
+	- var title = "Галлерея"
+block content
+	include ./templates/_navigation
+	+search
+	+track
+	+lightmenu
+	include ./templates/_41-gallery
+	+form
+	include ./templates/_7-contacts
+	include ./templates/_footer

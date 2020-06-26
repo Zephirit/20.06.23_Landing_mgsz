@@ -10,30 +10,39 @@
 		max-width: 1170px;
 		height: auto;
 		margin: auto;
-		padding: 40px 15px 160px;
+		padding: 40px 15px 15px;
 		box-sizing: border-box;
+		@include phones {
+			padding: 20px 15px 30px;
+		}
 	}
 
-	&__heading {
-		position: relative;
-		display: flex;
-	}
+	// &__heading {
+	// 	position: relative;
+	// 	display: flex;
+	// }
 
-	&__title {
-		position: relative;
-		width: 390px;
-		margin: 0;
-		margin-right: 100px;
-		font-size: 60px;
-		font-weight: 700;
-		text-transform: uppercase;
-	}
+	// &__title {
+	// 	position: relative;
+	// 	width: 390px;
+	// 	margin: 0;
+	// 	margin-right: 100px;
+	// 	font-size: 60px;
+	// 	font-weight: 700;
+	// 	text-transform: uppercase;
+	// }
 
 	&__subtitle {
-		position: relative;
+		position: absolute;
+		top: 45px;
+		width: 58%;
+		right: 0;
 		font-size: 16px;
 		font-weight: 300;
 		line-height: 30px;
+		@include phones {
+			display: none;
+		}
 
 		& p {
 			margin: 0;
@@ -47,6 +56,10 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin-bottom: 50px;
+		@include phones {
+			width: 100%;
+			margin-bottom: 0;
+		}
 
 	}
 	&__item{
@@ -54,7 +67,7 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
-		margin: 10px 0;
+		margin: 15px 0;
 	}
 	&__image{
 		position: relative;
@@ -72,12 +85,19 @@
 		font-size: 22px;
 		font-family: 'NoirPro';
 		margin: 0 10px;
+		@include phones {
+			font-size: 18px;
+			display: block;
+		}
 		& span{
 			width: 100%;
 			text-transform: uppercase;
 		}
 		& span:first-child{
 			white-space: nowrap;
+			@include phones {
+				white-space: normal;
+			}
 		}
 		& span:last-child{
 			padding-left: 5px;

@@ -1,0 +1,12 @@
+mixin pdf
+	.pdfs
+		.glide
+			.glide__track(data-glide-el="track")
+				.glide__slides.pdfs__slides
+					each item in [{'img':'3'},{'img':'2'},{'img':'steel'},{'img':'1'}]
+						.glide-slide
+							.pdf
+								.pdf__image
+									img(src=`./assets/images/pdfs_${item.img}.jpg`, alt=item.img)
+			.pdfs__controllers
+				+controllers('controllers--white')

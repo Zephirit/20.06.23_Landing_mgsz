@@ -1,0 +1,14 @@
+//- Наследуемый шаблон _template
+extends ./templates/_template
+block variables
+	- var title = "Подраздел"
+block content
+	include ./templates/_navigation
+	+search
+	+track
+	include ./templates/_71-subsection
+	include ./templates/_72-price
+	include ./templates/_73-text
+	+form
+	include ./templates/_7-contacts
+	include ./templates/_footer

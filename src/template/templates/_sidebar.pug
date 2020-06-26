@@ -11,38 +11,89 @@ sidebar.sidebar
 	.sidebar__call
 		a(href="#") Заказать звонок
 	.sidebar__rolling.sidebar__category
-		input(type="checkbox")#rolling
-		label(for="rolling")
-			h3 Металлопрокат
-		+sideType('tube','Трубы и фасонные изделия',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('fastener','Метизы',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('sheet','Листовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('sort','Сортовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('dowel','Шпунn')
-		+sideType('strip','Полособульб')
-		+sideType('forging','Поковки')
+		h3.sidebar__title.for-active 
+			span Металлопрокат
+			+arrow
+		.sidebar__list
+			+sideType('tube','Трубы и фасонные изделия',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('fastener','Метизы',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('sheet','Листовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
+			.sideType
+				.sideType__title.for-active
+					span Сортовой прокат
+					+arrow
+				ul.sideType__list
+					li.sideType__item
+						.sideTypeSub__title.for-active
+							span Арматура
+							+arrow
+						ul.sideTypeSub__list
+							li.sideTypeSub__item
+								a(href="#") Арматура
+							li.sideTypeSub__item
+								a(href="#") Арматура а3
+							li.sideTypeSub__item
+								a(href="#") Арматура ат800
+					li.sideType__item
+						.sideTypeSub__title.for-active
+							span Катанка
+					li.sideType__item
+						.sideTypeSub__title.for-active
+							span Балка
+							+arrow
+					li.sideType__item
+						.sideTypeSub__title.for-active
+							span КругКвадрат
+							+arrow
+					li.sideType__item
+						.sideTypeSub__title.for-active
+							span Полоса
+							+arrow
+					li.sideType__item
+						.sideTypeSub__title.for-active
+							span Шестигранник
+							+arrow
+					li.sideType__item
+						.sideTypeSub__title.for-active
+							span Швеллер
+							+arrow
+					li.sideType__item
+						.sideTypeSub__title.for-active
+							span Угол
+							+arrow
+			.sideType
+				.sideType__title
+					span Шпунт
+			.sideType
+				.sideType__title
+					span Полособульб
+			.sideType
+				.sideType__title
+					span Поковки
 	.sidebar__construct.sidebar__category
-		input(type="checkbox")#construct
-		label(for="construct")
-			h3 Металлоконструкции
-		+sideType('tube2','Трубы и фасонные изделия',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('fastener2','Метизы',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('sheet2','Листовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('sort2','Сортовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('dowel2','Шпунn')
-		+sideType('strip2','Полособульб')
-		+sideType('forging2','Поковки')
+		h3.sidebar__title.for-active
+			span Металлоконструкции
+			+arrow
+		.sidebar__list
+			+sideType('tube2','Трубы и фасонные изделия',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('fastener2','Метизы',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('sheet2','Листовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('sort2','Сортовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('dowel2','Шпунn')
+			+sideType('strip2','Полособульб')
+			+sideType('forging2','Поковки')
 	.sidebar__serv.sidebar__category
-		input(type="checkbox")#serv
-		label(for="serv")
-			h3 Услуги
-		+sideType('tube3','Трубы и фасонные изделия',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('fastener3','Метизы',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('sheet3','Листовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('sort3','Сортовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
-		+sideType('dowel3','Шпунn')
-		+sideType('strip3','Полособульб')
-		+sideType('forging3','Поковки')
+		h3.sidebar__title.for-active
+			span Услуги
+			+arrow
+		.sidebar__list
+			+sideType('tube3','Трубы и фасонные изделия',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('fastener3','Метизы',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('sheet3','Листовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('sort3','Сортовой прокат',['Изделие 1','Изделие 2','Изделие 3'])
+			+sideType('dowel3','Шпунn')
+			+sideType('strip3','Полособульб')
+			+sideType('forging3','Поковки')
 		
 	.sidebar__calc.sidebar__other
 		.sidebar__icon

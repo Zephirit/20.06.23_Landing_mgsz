@@ -1,0 +1,27 @@
+.arrow {
+  position: relative;
+  fill: none;
+  stroke: #254777;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  width: 10px;
+  height: 6px;
+  &--big{
+    width: 25px;
+    height: 12px;
+    stroke-width: 1px;
+  }
+  &--lightblue{
+    stroke: #729ccf;
+  }
+  &--left{
+    transform: rotate(90deg)
+  }
+  &--right{
+    transform: rotate(-90deg)
+  }
+  &--up{
+    transform: rotate(180deg)
+
+  }
+}

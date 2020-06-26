@@ -5,12 +5,33 @@
 	font-family: "NoirPro";
 	font-size: 16px;
 	color: #a5c2e6;
+	@include phones {
+		font-size: 12px;
+		width: 100%;
+		box-sizing: border-box;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	@include tablets {
+		font-size: 16px;
+	}
+	
 
 	& li {
+		@include phones {
+			margin: 0 10px;
+		}
 		& a {
 			font-family: "NoirPro";
 			font-size: 16px;
 			color: white;
+			@include phones {
+				font-size: 12px;
+			}
+			@include tablets {
+				font-size: 16px;
+			}
+
 		}
 
 	}

@@ -1,0 +1,16 @@
+//- Наследуемый шаблон _template
+extends ./templates/_template
+block variables
+	- var title = "Карточка"
+block content
+	include ./templates/_navigation
+	+search
+	+track
+	+lightmenu
+	include ./templates/_51-card
+	include ./templates/_52-price
+	include ./templates/_53-description
+	include ./templates/_54-recomend
+	+form
+	include ./templates/_7-contacts
+	include ./templates/_footer

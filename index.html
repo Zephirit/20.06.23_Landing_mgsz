@@ -18,12 +18,16 @@
   </head>
   <body>
     <div class="wrapper">
-      <input type="checkbox" id="burger">
-      <label class="burger" for="burger">
+      <div class="navburger for-active" id="navburger">
+        <div class="navburger-line"></div>
+        <div class="navburger-line"></div>
+        <div class="navburger-line"></div>
+      </div>
+      <div class="burger for-active" id="burger">
         <div class="burger-line"></div>
         <div class="burger-line"></div>
         <div class="burger-line"></div>
-      </label>
+      </div>
       <sidebar class="sidebar">
         <div class="sidebar__logo"><img class="sidebar__svg" src="./assets/images/logo.png"></div>
         <div class="sidebar__phones">
@@ -32,184 +36,358 @@
         </div>
         <div class="sidebar__call"><a href="#">Заказать звонок</a></div>
         <div class="sidebar__rolling sidebar__category">
-          <input type="checkbox" id="rolling">
-          <label for="rolling">
-            <h3>Металлопрокат</h3>
-          </label>
-              <div class="sideType">
-                <input type="checkbox" id="tube">
-                <label for="tube"><span>Трубы и фасонные изделия</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
+          <h3 class="sidebar__title for-active"> <span>Металлопрокат</span>
+                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                  <path d="M0 0 L5 6 L10 0"></path>
+                </svg>
+          </h3>
+          <div class="sidebar__list">
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Трубы и фасонные изделия</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Метизы</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Листовой прокат</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+            <div class="sideType">
+              <div class="sideType__title for-active"><span>Сортовой прокат</span>
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                      <path d="M0 0 L5 6 L10 0"></path>
+                    </svg>
               </div>
-              <div class="sideType">
-                <input type="checkbox" id="fastener">
-                <label for="fastener"><span>Метизы</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="sheet">
-                <label for="sheet"><span>Листовой прокат</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="sort">
-                <label for="sort"><span>Сортовой прокат</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="dowel">
-                <label for="dowel"><span>Шпунn</span><span>></span></label>
-                <ul class="sideType__list">
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="strip">
-                <label for="strip"><span>Полособульб</span><span>></span></label>
-                <ul class="sideType__list">
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="forging">
-                <label for="forging"><span>Поковки</span><span>></span></label>
-                <ul class="sideType__list">
-                </ul>
-              </div>
+              <ul class="sideType__list">
+                <li class="sideType__item">
+                  <div class="sideTypeSub__title for-active"><span>Арматура</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideTypeSub__list">
+                    <li class="sideTypeSub__item"><a href="#">Арматура</a></li>
+                    <li class="sideTypeSub__item"><a href="#">Арматура а3</a></li>
+                    <li class="sideTypeSub__item"><a href="#">Арматура ат800</a></li>
+                  </ul>
+                </li>
+                <li class="sideType__item">
+                  <div class="sideTypeSub__title for-active"><span>Катанка</span></div>
+                </li>
+                <li class="sideType__item">
+                  <div class="sideTypeSub__title for-active"><span>Балка</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                </li>
+                <li class="sideType__item">
+                  <div class="sideTypeSub__title for-active"><span>КругКвадрат</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                </li>
+                <li class="sideType__item">
+                  <div class="sideTypeSub__title for-active"><span>Полоса</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                </li>
+                <li class="sideType__item">
+                  <div class="sideTypeSub__title for-active"><span>Шестигранник</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                </li>
+                <li class="sideType__item">
+                  <div class="sideTypeSub__title for-active"><span>Швеллер</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                </li>
+                <li class="sideType__item">
+                  <div class="sideTypeSub__title for-active"><span>Угол</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sideType">
+              <div class="sideType__title"><span>Шпунт</span></div>
+            </div>
+            <div class="sideType">
+              <div class="sideType__title"><span>Полособульб</span></div>
+            </div>
+            <div class="sideType">
+              <div class="sideType__title"><span>Поковки</span></div>
+            </div>
+          </div>
         </div>
         <div class="sidebar__construct sidebar__category">
-          <input type="checkbox" id="construct">
-          <label for="construct">
-            <h3>Металлоконструкции</h3>
-          </label>
-              <div class="sideType">
-                <input type="checkbox" id="tube2">
-                <label for="tube2"><span>Трубы и фасонные изделия</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="fastener2">
-                <label for="fastener2"><span>Метизы</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="sheet2">
-                <label for="sheet2"><span>Листовой прокат</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="sort2">
-                <label for="sort2"><span>Сортовой прокат</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="dowel2">
-                <label for="dowel2"><span>Шпунn</span><span>></span></label>
-                <ul class="sideType__list">
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="strip2">
-                <label for="strip2"><span>Полособульб</span><span>></span></label>
-                <ul class="sideType__list">
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="forging2">
-                <label for="forging2"><span>Поковки</span><span>></span></label>
-                <ul class="sideType__list">
-                </ul>
-              </div>
+          <h3 class="sidebar__title for-active"><span>Металлоконструкции</span>
+                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                  <path d="M0 0 L5 6 L10 0"></path>
+                </svg>
+          </h3>
+          <div class="sidebar__list">
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Трубы и фасонные изделия</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Метизы</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Листовой прокат</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Сортовой прокат</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Шпунn</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Полособульб</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Поковки</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                  </ul>
+                </div>
+          </div>
         </div>
         <div class="sidebar__serv sidebar__category">
-          <input type="checkbox" id="serv">
-          <label for="serv">
-            <h3>Услуги</h3>
-          </label>
-              <div class="sideType">
-                <input type="checkbox" id="tube3">
-                <label for="tube3"><span>Трубы и фасонные изделия</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="fastener3">
-                <label for="fastener3"><span>Метизы</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="sheet3">
-                <label for="sheet3"><span>Листовой прокат</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="sort3">
-                <label for="sort3"><span>Сортовой прокат</span><span>></span></label>
-                <ul class="sideType__list">
-                  <li class="sideType__item"><a href="#">Изделие 1</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 2</a></li>
-                  <li class="sideType__item"><a href="#">Изделие 3</a></li>
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="dowel3">
-                <label for="dowel3"><span>Шпунn</span><span>></span></label>
-                <ul class="sideType__list">
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="strip3">
-                <label for="strip3"><span>Полособульб</span><span>></span></label>
-                <ul class="sideType__list">
-                </ul>
-              </div>
-              <div class="sideType">
-                <input type="checkbox" id="forging3">
-                <label for="forging3"><span>Поковки</span><span>></span></label>
-                <ul class="sideType__list">
-                </ul>
-              </div>
+          <h3 class="sidebar__title for-active"><span>Услуги</span>
+                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                  <path d="M0 0 L5 6 L10 0"></path>
+                </svg>
+          </h3>
+          <div class="sidebar__list">
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Трубы и фасонные изделия</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Метизы</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Листовой прокат</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Сортовой прокат</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 1</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 2</span></div>
+                    </li>
+                    <li class="sideTypeSub">
+                      <div class="sideTypeSub__title for-active"><span>Изделие 3</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Шпунn</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Полособульб</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                  </ul>
+                </div>
+                <div class="sideType">
+                  <div class="sideType__title for-active"><span>Поковки</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                          <path d="M0 0 L5 6 L10 0"></path>
+                        </svg>
+                  </div>
+                  <ul class="sideType__list">
+                  </ul>
+                </div>
+          </div>
         </div>
         <div class="sidebar__calc sidebar__other">
           <div class="sidebar__icon"><img src="./assets/images/calculator.png" alt="calculator"></div><span>Калькулятор</span>
@@ -222,11 +400,26 @@
         <nav class="navigation" id="navigation">
           <div class="navigation__menu">
             <ul class="navigation__list">
-              <li class="navigation__item"><a href=""><span>О компании</span><span>></span></a></li>
-              <li class="navigation__item"><a href=""><span>Клиенты</span></a></li>
-              <li class="navigation__item"><a href=""><span>Галерея</span></a></li>
-              <li class="navigation__item"><a href=""><span>Полезное</span></a></li>
-              <li class="navigation__item"><a href=""><span>Контакты</span></a></li>
+              <li class="navigation__item for-active"><a href="/about"><span>О компании</span>
+                      <svg class="arrow--right arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                        <path d="M0 0 L5 6 L10 0"></path>
+                      </svg></a>
+                <ul class="navigation__sublist">
+                  <li class="navigation__subitem"><a href="#"><span>Новости компании</span></a></li>
+                      <div class="square-small-blue">
+                        <div class="square-small-blue__inner"></div>
+                      </div>
+                  <li class="navigation__subitem"><a href="#"><span>Новости рынка металлов</span></a></li>
+                      <div class="square-small-blue">
+                        <div class="square-small-blue__inner"></div>
+                      </div>
+                  <li class="navigation__subitem"><a href="#"><span>Наши клиенты</span></a></li>
+                </ul>
+              </li>
+              <li class="navigation__item"><a href="#"><span>Клиенты</span></a></li>
+              <li class="navigation__item"><a href="/gallery.html"><span>Галерея</span></a></li>
+              <li class="navigation__item"><a href="#"><span>Полезное</span></a></li>
+              <li class="navigation__item"><a href="/contacts"><span>Контакты</span></a></li>
             </ul>
             <button class="navigation__tick">
               <div class="navigation__img"><img src="./assets/images/tick.png" alt="order"></div><span>Оставить заявку</span>
@@ -252,7 +445,7 @@
                             <div class="square-small-blue__inner"></div>
                           </div>
                       <input type="text">
-                      <label>Что вы ищите?</label>
+                      <label>Что вы ищете?</label>
                       <div class="search__magnify"><img src="./assets/images/magnifying-glass.png" alt="magnifying-glass"></div>
                     </div>
                   </div>
@@ -272,48 +465,79 @@
         </header>
         <section class="section goods" id="goods">
           <div class="goods__content">
-                <div class="square-large-blue">
-                  <div class="square-large-blue__inner"></div>
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Товары месяца</h2><a class="section-subtitle" href="">Весь каталог</a>
+                  <div class="section-text"></div>
                 </div>
-            <div class="products__heading">
-              <div class="products__title">Товары месяца</div>
-            </div>
             <div class="goods__slider">
               <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                   <div class="glide__slides goods__slides">
                     <div class="glide-slide">
                       <div class="good">
+                        <div class="good__image"><img src="./assets/images/goods_steel.jpg" alt="steel"></div>
+                            <div class="square-medium-red">
+                              <div class="square-medium-red__inner"></div>
+                            </div>
+                        <div class="good__info">
+                          <div class="good__title">Лист стальной оцинкованный</div><a class="good__link" href="#">Подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="glide-slide">
+                      <div class="good">
                         <div class="good__image"><img src="./assets/images/goods_armature.jpg" alt="armature"></div>
-                            <div class="square-small-red">
-                              <div class="square-small-red__inner"></div>
+                            <div class="square-medium-red">
+                              <div class="square-medium-red__inner"></div>
                             </div>
-                        <div class="good__title">Лист</div><a class="good__link" href="#">Подробнее</a>
+                        <div class="good__info">
+                          <div class="good__title">Арматура А3</div><a class="good__link" href="#">Подробнее</a>
+                        </div>
                       </div>
                     </div>
                     <div class="glide-slide">
                       <div class="good">
                         <div class="good__image"><img src="./assets/images/goods_steel.jpg" alt="steel"></div>
-                            <div class="square-small-red">
-                              <div class="square-small-red__inner"></div>
+                            <div class="square-medium-red">
+                              <div class="square-medium-red__inner"></div>
                             </div>
-                        <div class="good__title">Арматура</div><a class="good__link" href="#">Подробнее</a>
+                        <div class="good__info">
+                          <div class="good__title">Лист стальной оцинкованный</div><a class="good__link" href="#">Подробнее</a>
+                        </div>
                       </div>
                     </div>
                     <div class="glide-slide">
                       <div class="good">
-                        <div class="good__image"><img src="./assets/images/goods_steel.jpg" alt="steel"></div>
-                            <div class="square-small-red">
-                              <div class="square-small-red__inner"></div>
+                        <div class="good__image"><img src="./assets/images/goods_armature.jpg" alt="armature"></div>
+                            <div class="square-medium-red">
+                              <div class="square-medium-red__inner"></div>
                             </div>
-                        <div class="good__title">Арматура</div><a class="good__link" href="#">Подробнее</a>
+                        <div class="good__info">
+                          <div class="good__title">Арматура А3</div><a class="good__link" href="#">Подробнее</a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div data-glide-el="controls">
-                  <button data-glide-dir="&lt;&lt;"><</button>
-                  <button data-glide-dir="&gt;&gt;">></button>
+                <div class="goods__controllers">
+                      <div class="controllers">
+                        <div class="controllers__quant"><span class="controllers__slide" data-glide-el="track">01</span><span class="controllers__from">/</span><span class="controllers__all">08</span></div>
+                        <div class="controllers__arrows" data-glide-el="controls">
+                          <button data-glide-dir="&lt;">
+                                <svg class="arrow--left arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                  <path d="M0 0 L5 6 L10 0"></path>
+                                </svg>
+                          </button>
+                          <button data-glide-dir="&gt;">
+                                <svg class="arrow--right arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                  <path d="M0 0 L5 6 L10 0"></path>
+                                </svg>
+                          </button>
+                        </div>
+                      </div>
                 </div>
               </div>
             </div>
@@ -321,15 +545,16 @@
         </section>
         <section class="section products" id="products">
           <div class="products__content">
-                <div class="square-large-blue">
-                  <div class="square-large-blue__inner"></div>
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Наша продукция</h2><a class="section-subtitle" href=""></a>
+                  <div class="section-text"></div>
                 </div>
-            <div class="products__heading">
-              <div class="products__title">Наша продукция</div>
-              <div class="products__subtitle"> 
-                <p>Наша компания предлагает широкий выбор услуг, связанных с металлом.</p>
-                <p>Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</p>
-              </div>
+            <div class="products__text"> 
+              <p>Наша компания предлагает широкий выбор услуг, связанных с металлом.</p>
+              <p>Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</p>
             </div>
             <div class="products__body">
                   <div class="product">
@@ -425,10 +650,13 @@
             </div>
         <section class="section services" id="services">
           <div class="services__content">
-                <div class="square-large-blue">
-                  <div class="square-large-blue__inner"></div>
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Мы предлагаем услуги</h2><a class="section-subtitle" href="">Все услуги</a>
+                  <div class="section-text"></div>
                 </div>
-            <div class="services__heading"><span class="services__title">Мы предлагаем услуги</span><a class="services__subtitle" href="">Все услуги</a></div>
             <div class="services__body">
                   <div class="service">
                     <div class="service__heading">
@@ -483,14 +711,15 @@
         </section>
         <section class="section advantages" id="advantages">
           <div class="advantages__content">
-                <div class="square-large-blue">
-                  <div class="square-large-blue__inner"></div>
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Что вы получаете?</h2><a class="section-subtitle" href=""></a>
+                  <div class="section-text"></div>
                 </div>
-            <div class="advantages__heading">
-              <h2 class="advantages__title">Что вы получаете?</h2>
-              <div class="advantages__subtitle">
-                <p>ООО «МеталлГрупп Северо-Запад» — это команда профессионалов, которым важен каждый Ваш заказ, мы работаем ради Вашего успеха и ценим Вашу благодарность! Оглядываясь назад, мы гордимся, что поставляли металлопрокат и металлоконструкции на множество строительных объектов, в том числе на ЗСД, Зенит-Арена, Лахта-Центр и другие.</p>
-              </div>
+            <div class="advantages__subtitle">
+              <p>ООО «МеталлГрупп Северо-Запад» — это команда профессионалов, которым важен каждый Ваш заказ, мы работаем ради Вашего успеха и ценим Вашу благодарность! Оглядываясь назад, мы гордимся, что поставляли металлопрокат и металлоконструкции на множество строительных объектов, в том числе на ЗСД, Зенит-Арена, Лахта-Центр и другие.</p>
             </div>
             <div class="advantages__list">
               <div class="advantages__item">
@@ -517,32 +746,107 @@
           </div>
         </section>
         <section class="section reviews" id="reviews">
+          <div class="reviews__bg"><img src="./assets/images/reviews_lg.jpg" alt="Фон формы"></div>
           <div class="reviews__content">
-            <div class="reviews__title"> <span>Высокое качество продукции и сервиса</span><span>Подтверждены отзывами наших клиентов!</span></div>
-            <div class="reviews__body"></div>
+            <h2 class="reviews__title"> <span>Высокое качество продукции и сервиса</span><span>Подтверждены отзывами наших клиентов!</span></h2>
+            <div class="reviews__sliders">
+                  <div class="pdfs">
+                    <div class="glide">
+                      <div class="glide__track" data-glide-el="track">
+                        <div class="glide__slides pdfs__slides">
+                          <div class="glide-slide">
+                            <div class="pdf">
+                              <div class="pdf__image"><img src="./assets/images/pdfs_3.jpg" alt="3"></div>
+                            </div>
+                          </div>
+                          <div class="glide-slide">
+                            <div class="pdf">
+                              <div class="pdf__image"><img src="./assets/images/pdfs_2.jpg" alt="2"></div>
+                            </div>
+                          </div>
+                          <div class="glide-slide">
+                            <div class="pdf">
+                              <div class="pdf__image"><img src="./assets/images/pdfs_steel.jpg" alt="steel"></div>
+                            </div>
+                          </div>
+                          <div class="glide-slide">
+                            <div class="pdf">
+                              <div class="pdf__image"><img src="./assets/images/pdfs_1.jpg" alt="1"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pdfs__controllers">
+                            <div class="controllers controllers--white">
+                              <div class="controllers__quant"><span class="controllers__slide" data-glide-el="track">01</span><span class="controllers__from">/</span><span class="controllers__all">08</span></div>
+                              <div class="controllers__arrows" data-glide-el="controls">
+                                <button data-glide-dir="&lt;">
+                                      <svg class="arrow--left arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                        <path d="M0 0 L5 6 L10 0"></path>
+                                      </svg>
+                                </button>
+                                <button data-glide-dir="&gt;">
+                                      <svg class="arrow--right arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                        <path d="M0 0 L5 6 L10 0"></path>
+                                      </svg>
+                                </button>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
           </div>
         </section>
         <section class="section news" id="news">
           <div class="news__content">
-            <div class="news__title">Новости компании</div>
-            <div class="news__body"></div>
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Новости компании</h2><a class="section-subtitle" href="">Все новости</a>
+                  <div class="section-text"></div>
+                </div>
+            <div class="news__body">
+                  <div class="news__item">
+                    <div class="news__img"><img src="./assets/images/news_1.jpg" alt="news_1"></div>
+                    <div class="news__date">15.03.2020</div>
+                    <div class="news__name">поздравляем Всех с Днем Строителя</div>
+                    <div class="news__text">Наша компания предлагает широкий выбор услуг, связанных с металлом. Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</div>
+                    <div class="news__more"><a href="">Подробнее</a></div>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img"><img src="./assets/images/news_2.jpg" alt="news_2"></div>
+                    <div class="news__date">18.04.2020</div>
+                    <div class="news__name">У нас новый адрес!</div>
+                    <div class="news__text">Наша компания предлагает широкий выбор услуг, связанных с металлом. Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</div>
+                    <div class="news__more"><a href="">Подробнее</a></div>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img"><img src="./assets/images/news_3.jpg" alt="news_3"></div>
+                    <div class="news__date">09.05.2020</div>
+                    <div class="news__name">Поздравляем с 75-летием великой Победы</div>
+                    <div class="news__text">Наша компания предлагает широкий выбор услуг, связанных с металлом. Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</div>
+                    <div class="news__more"><a href="">Подробнее</a></div>
+                  </div>
+            </div>
           </div>
         </section>
         <section class="section contacts" id="contacts">
           <div class="contacts__content">
-                <div class="square-large-blue">
-                  <div class="square-large-blue__inner"></div>
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Контакты</h2><a class="section-subtitle" href="">Подробнее о контактах</a>
+                  <div class="section-text"></div>
                 </div>
-            <div class="contacts__heading">
-              <div class="contacts__title">Контакты</div>
-            </div>
           </div>
           <div class="contacts__maps">
             <div class="contacts__piece contacts__data sp-office">
                   <div class="contact">
                     <h3 class="contact__title">офис в санкт-петербурге</h3>
-                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a>
-                    <div class="contact__address"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></div>
+                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
                     <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
@@ -550,8 +854,7 @@
             <div class="contacts__piece contacts__data sp-stock">
                   <div class="contact">
                     <h3 class="contact__title">склад в санкт-петербурге</h3>
-                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a>
-                    <div class="contact__address"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></div>
+                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
                     <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
@@ -559,15 +862,14 @@
             <div class="contacts__piece contacts__data msk-stock">
                   <div class="contact">
                     <h3 class="contact__title">склад в москве</h3>
-                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>Карачарово, ул. Стахановская, д. 19</span></div><a class="contact__phone" href="tel: 84996537548"><img src="./assets/images/phone-call.png" alt="address"><span> 8 (499) 653-75-48</span></a>
-                    <div class="contact__address"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></div>
+                    <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>Карачарово, ул. Стахановская, д. 19</span></div><a class="contact__phone" href="tel: 84996537548"><img src="./assets/images/phone-call.png" alt="address"><span> 8 (499) 653-75-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
                     <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
             <div class="contacts__piece contacts__map msk-stock"><img src="./assets/images/msk-stock.jpg" alt="sp-office"></div>
           </div>
         </section>
-            <div class="form">
+            <div class="form form--bottom">
               <div class="form__bg"><img src="./assets/images/form_lg.jpg" alt="Фон формы"></div>
               <div class="form__content">
                     <div class="square-large-blue">
@@ -683,7 +985,7 @@
         </footer>
       </div>
     </div>
-    <script src="./assets/libraries/glide-3.4.1/dist/glide.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/libraries/glide-3.4.1/dist/glide.min.mjs"></script>
+    <script src="./assets/js/script.mjs"></script>
   </body>
 </html>

@@ -32,6 +32,16 @@ html(lang="ru-Ru")
 	body
 		include ../common/_mixins
 		.wrapper
-			block content
-		script(src="./assets/libraries/glide-3.4.1/dist/glide.min.js")
-		script(src="./assets/js/script.js")
+			.navburger#navburger.for-active
+				.navburger-line
+				.navburger-line
+				.navburger-line
+			.burger#burger.for-active
+				.burger-line
+				.burger-line
+				.burger-line
+			include ./_sidebar
+			.container
+				block content
+		script(src="./assets/libraries/glide-3.4.1/dist/glide.min.mjs")
+		script(src="./assets/js/script.mjs")

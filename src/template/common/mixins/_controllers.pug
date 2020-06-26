@@ -1,0 +1,11 @@
+mixin controllers(cl)
+	.controllers(class=cl)
+		.controllers__quant
+			span.controllers__slide(data-glide-el="track") 01
+			span.controllers__from /
+			span.controllers__all 08
+		.controllers__arrows(data-glide-el='controls')
+			button(data-glide-dir="<")
+				+arrow('arrow--left arrow--big arrow--lightblue')
+			button(data-glide-dir=">")
+				+arrow('arrow--right arrow--big arrow--lightblue')

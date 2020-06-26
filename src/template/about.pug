@@ -1,0 +1,18 @@
+//- Наследуемый шаблон _template
+extends ./templates/_template
+block variables
+	- var title = "О компании"
+block content
+	include ./templates/_navigation
+	+search
+	+track
+	include ./templates/_21-about
+	include ./templates/_22-clients
+	include ./templates/_23-reviews
+	include ./templates/_24-more
+	include ./templates/_25-advantages
+	include ./templates/_26-logic
+	include ./templates/_27-stock
+	include ./templates/_7-contacts
+	+form
+	include ./templates/_footer

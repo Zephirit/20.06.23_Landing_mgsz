@@ -1,0 +1,12 @@
+//- Наследуемый шаблон _template
+extends ./templates/_template
+block variables
+	- var title = "Каталог"
+block content
+	include ./templates/_navigation
+	+search
+	+track
+	include ./templates/_11-catalog
+	+form
+	include ./templates/_7-contacts
+	include ./templates/_footer

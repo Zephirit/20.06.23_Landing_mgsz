@@ -1,34 +1,42 @@
 #burger {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-  &:checked {
+	user-select: none;
+	cursor: pointer;
+  &.selected {
+		transform: translate3d(250px, 0, 0);
     & ~ .sidebar {
 			transform: translate3d(0, 0, 0);
 			box-shadow: 0 0 10px rgba(black,.7);
 		}
-		& ~ .burger{
-			transform: translate3d(250px, 0, 0);
-		}
-  }
+	}
 }
 .burger{
 	position: fixed;
 	z-index: 999;
 	display: none;
 	width: 30px;
-	height: 30px;
-	top: 10px;
+	height: 21px;
+	top: 15px;
 	left: 10px;
 	transform: translate3d(0, 0, 0);
 	transition: all .4s;
+	padding: 5px;
+	background: rgba($subColor,.1);
+	border-radius: 3px;
+	&:hover, &:focus {
+		.burger-line {
+			box-shadow: 0 0 5px black;
+		}
+	}
 	&-line{
 		position: relative;
 		width: 100%;
 		height: 3px;
-		background: gray;
+		border-radius: 1px;
+		background: white;
+		box-shadow: 0 0 3px black;
+
 	}
-	@include phones{
+	@include no-sidebar{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
