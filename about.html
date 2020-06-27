@@ -18,12 +18,39 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="navburger for-active" id="navburger">
+          <div class="popup" id="popup">
+            <div class="popup__close" id="pop-close">+</div>
+            <div class="popup__price">
+              <div class="popup__img"><img src="./assets/images/pdf.png" alt="pdf"></div><span>Скачать полный прайс</span>
+            </div><span class="popup__desc">если вам необходим прайс отдельной категории или товара - запроситe его у нашего менеджера</span>
+            <div class="popup__heading">
+              <div class="popup__title">Оставить заявку</div>
+            </div>
+            <div class="popup__body">
+              <input type="name" placeholder="Ваше имя*" required>
+              <input type="phone" placeholder="Телефон*" required>
+              <input type="email" placeholder="Email*" required>
+              <textarea rows="5" placeholder="Текст сообщения"></textarea>
+              <div class="popup__body-submit">
+                <div class="popup__body-check">
+                  <div class="popup__body-checker">
+                    <input type="checkbox">
+                  </div>
+                  <div class="popup__body-text">Я подтверждаю, что ознакомлен(а) и согласен(на) с условиями<a href="">Передачи информации</a><span>*поля обязательные для заполнения</span></div>
+                </div>
+                <button class="popup__button">
+                  <div class="popup__button-icon"><img src="./assets/images/form_button.png" alt="Отправить"></div>
+                  <div class="popup__button-text">Отправить</div>
+                </button>
+              </div>
+            </div>
+          </div>
+      <div class="navburger brg" id="navburger">
         <div class="navburger-line"></div>
         <div class="navburger-line"></div>
         <div class="navburger-line"></div>
       </div>
-      <div class="burger for-active" id="burger">
+      <div class="burger brg" id="burger">
         <div class="burger-line"></div>
         <div class="burger-line"></div>
         <div class="burger-line"></div>
@@ -392,7 +419,7 @@
         <div class="sidebar__calc sidebar__other">
           <div class="sidebar__icon"><img src="./assets/images/calculator.png" alt="calculator"></div><span>Калькулятор</span>
         </div>
-        <div class="sidebar__price sidebar__other">
+        <div class="sidebar__price sidebar__other pop-trg">
           <div class="sidebar__icon"><img src="./assets/images/copy.png" alt="copy"></div><span>Скачать прайс-лист</span>
         </div>
       </sidebar>
@@ -400,42 +427,360 @@
         <nav class="navigation" id="navigation">
           <div class="navigation__menu">
             <ul class="navigation__list">
-              <li class="navigation__item for-active"><a href="/about"><span>О компании</span>
+              <li class="navigation__item for-active"><a href="/about.html"><span>О компании</span>
                       <svg class="arrow--right arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
                         <path d="M0 0 L5 6 L10 0"></path>
                       </svg></a>
                 <ul class="navigation__sublist">
-                  <li class="navigation__subitem"><a href="#"><span>Новости компании</span></a></li>
+                  <li class="navigation__subitem"><a href="/news.html"><span>Новости компании</span></a></li>
                       <div class="square-small-blue">
                         <div class="square-small-blue__inner"></div>
                       </div>
-                  <li class="navigation__subitem"><a href="#"><span>Новости рынка металлов</span></a></li>
+                  <li class="navigation__subitem"><a href="/news.html"><span>Новости рынка металлов</span></a></li>
                       <div class="square-small-blue">
                         <div class="square-small-blue__inner"></div>
                       </div>
-                  <li class="navigation__subitem"><a href="#"><span>Наши клиенты</span></a></li>
+                  <li class="navigation__subitem"><a href="/about.html"><span>Наши клиенты</span></a></li>
                 </ul>
               </li>
-              <li class="navigation__item"><a href="#"><span>Клиенты</span></a></li>
+              <li class="navigation__item"><a href="/about.html"><span>Клиенты</span></a></li>
               <li class="navigation__item"><a href="/gallery.html"><span>Галерея</span></a></li>
-              <li class="navigation__item"><a href="#"><span>Полезное</span></a></li>
-              <li class="navigation__item"><a href="/contacts"><span>Контакты</span></a></li>
+              <li class="navigation__item"><a href="/about.html"><span>Полезное</span></a></li>
+              <li class="navigation__item"><a href="/contacts.html"><span>Контакты</span></a></li>
             </ul>
-            <button class="navigation__tick">
+            <button class="navigation__tick pop-trg">
               <div class="navigation__img"><img src="./assets/images/tick.png" alt="order"></div><span>Оставить заявку</span>
             </button>
           </div>
         </nav>
-            <div class="search" id="search">
+            <div class="search search--gray" id="search">
               <div class="search__input">
                     <div class="square-small-blue">
                       <div class="square-small-blue__inner"></div>
                     </div>
-                <input type="text">
-                <label>Что вы ищете?</label>
+                <input type="text" placeholder="Что вы ищете?">
                 <div class="search__magnify"><img src="./assets/images/magnifying-glass.png" alt="magnifying-glass"></div>
               </div>
             </div>
+        <section class="section about" id="about">
+          <div class="about__content">
+                <div class="path"><a class="path__from" href="/">Главная</a>
+                  <div class="path__icon">>></div>
+                  <div class="path__to">О компании</div>
+                </div>
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">О компании</h2><a class="section-subtitle" href=""></a>
+                  <div class="section-text"></div>
+                </div>
+                <div class="square-large-blue">
+                  <div class="square-large-blue__inner"></div>
+                </div>
+            <div class="about__body">
+                      <div class="square-medium-blue square-medium-blue--light">
+                        <div class="square-medium-blue__inner"></div>
+                      </div>
+                  <div class="section-medium-heading">
+                    <h3 class="section-medium-title">Новости компании</h3><a class="section-medium-subtitle" href="">все новости</a>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img"><img src="./assets/images/news_1.jpg" alt="news_1"></div>
+                    <div class="news__date">15.03.2020</div>
+                    <div class="news__name">поздравляем Всех с Днем Строителя</div>
+                    <div class="news__text">Наша компания предлагает широкий выбор услуг, связанных с металлом. Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</div>
+                    <div class="news__more"><a href="">Подробнее</a></div>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img"><img src="./assets/images/news_2.jpg" alt="news_2"></div>
+                    <div class="news__date">18.04.2020</div>
+                    <div class="news__name">У нас новый адрес!</div>
+                    <div class="news__text">Наша компания предлагает широкий выбор услуг, связанных с металлом. Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</div>
+                    <div class="news__more"><a href="">Подробнее</a></div>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img"><img src="./assets/images/news_3.jpg" alt="news_3"></div>
+                    <div class="news__date">09.05.2020</div>
+                    <div class="news__name">Поздравляем с 75-летием великой Победы</div>
+                    <div class="news__text">Наша компания предлагает широкий выбор услуг, связанных с металлом. Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</div>
+                    <div class="news__more"><a href="">Подробнее</a></div>
+                  </div>
+            </div>
+            <div class="about__body">
+                      <div class="square-medium-blue square-medium-blue--light">
+                        <div class="square-medium-blue__inner"></div>
+                      </div>
+                  <div class="section-medium-heading">
+                    <h3 class="section-medium-title">Новости рынка металлов</h3><a class="section-medium-subtitle" href="">все новости</a>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img"><img src="./assets/images/news_1.jpg" alt="news_1"></div>
+                    <div class="news__date">15.03.2020</div>
+                    <div class="news__name">поздравляем Всех с Днем Строителя</div>
+                    <div class="news__text">Наша компания предлагает широкий выбор услуг, связанных с металлом. Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</div>
+                    <div class="news__more"><a href="">Подробнее</a></div>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img"><img src="./assets/images/news_2.jpg" alt="news_2"></div>
+                    <div class="news__date">18.04.2020</div>
+                    <div class="news__name">У нас новый адрес!</div>
+                    <div class="news__text">Наша компания предлагает широкий выбор услуг, связанных с металлом. Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</div>
+                    <div class="news__more"><a href="">Подробнее</a></div>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img"><img src="./assets/images/news_3.jpg" alt="news_3"></div>
+                    <div class="news__date">09.05.2020</div>
+                    <div class="news__name">Поздравляем с 75-летием великой Победы</div>
+                    <div class="news__text">Наша компания предлагает широкий выбор услуг, связанных с металлом. Мы осуществляем не только продажу металлопроката, но также и изготовление различных металлоконструкций. Вы можете рассчитывать на то, что с помощью высокотехнологичного оборудования наших цехов и квалифицированных мастеров, имеющих большой опыт работы, мы выполним ее отлично.</div>
+                    <div class="news__more"><a href="">Подробнее</a></div>
+                  </div>
+            </div>
+          </div>
+        </section>
+        <section class="section clients" id="clients">
+          <div class="clients__content">
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Наши клиенты</h2><a class="section-subtitle" href="">Подробнее</a>
+                  <div class="section-text"></div>
+                </div>
+                <div class="square-large-blue">
+                  <div class="square-large-blue__inner"></div>
+                </div>
+            <div class="clients__body clislider">
+              <div class="glide__track" data-glide-el="track">
+                <div class="glide__slides">
+                      <div class="client">
+                        <div class="client__img"><img src="./assets/images/clients_railway.jpg" alt="railway"></div>
+                        <div class="client__name">Российские железные дороги</div>
+                      </div>
+                      <div class="client">
+                        <div class="client__img"><img src="./assets/images/clients_ministry.jpg" alt="ministry"></div>
+                        <div class="client__name">Министерство обороны РФ</div>
+                      </div>
+                      <div class="client">
+                        <div class="client__img"><img src="./assets/images/clients_subway.jpg" alt="subway"></div>
+                        <div class="client__name">Петербургский метрополитен</div>
+                      </div>
+                      <div class="client">
+                        <div class="client__img"><img src="./assets/images/clients_rosatom.jpg" alt="rosatom"></div>
+                        <div class="client__name">Госкорпорация &quot;Росатом&quot;</div>
+                      </div>
+                </div>
+              </div>
+              <div class="clients__controllers">
+                    <div class="controllers">
+                      <div class="controllers__quant"><span class="controllers__slide" data-glide-el="track">01</span><span class="controllers__from">/</span><span class="controllers__all">08</span></div>
+                      <div class="controllers__arrows" data-glide-el="controls">
+                        <button data-glide-dir="&lt;">
+                              <svg class="arrow--left arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                <path d="M0 0 L5 6 L10 0"></path>
+                              </svg>
+                        </button>
+                        <button data-glide-dir="&gt;">
+                              <svg class="arrow--right arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                <path d="M0 0 L5 6 L10 0"></path>
+                              </svg>
+                        </button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section reviews" id="reviews">
+          <div class="reviews__bg"><img src="./assets/images/reviews_lg.jpg" alt="Фон формы"></div>
+          <div class="reviews__content-extended">
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Отзывы</h2><a class="section-subtitle" href=""></a>
+                  <div class="section-text"></div>
+                </div>
+            <h2 class="reviews__title"> <span>Высокое качество продукции и сервиса</span><span>Подтверждены отзывами наших клиентов!</span></h2>
+            <div class="reviews__desc">Благодарственное письмо от компании "РЖД"	</div>
+            <div class="reviews__sliders">
+                  <div class="pdfs">
+                    <div class="glide__pdf pdf__2">
+                      <div class="glide__track" data-glide-el="track">
+                        <div class="glide__slides pdfs__slides">
+                          <div class="glide-slide">
+                            <div class="pdf">
+                              <div class="pdf__image"><img src="./assets/images/pdfs_3.jpg" alt="3"></div>
+                            </div>
+                          </div>
+                          <div class="glide-slide">
+                            <div class="pdf">
+                              <div class="pdf__image"><img src="./assets/images/pdfs_2.jpg" alt="2"></div>
+                            </div>
+                          </div>
+                          <div class="glide-slide">
+                            <div class="pdf">
+                              <div class="pdf__image"><img src="./assets/images/pdfs_steel.jpg" alt="steel"></div>
+                            </div>
+                          </div>
+                          <div class="glide-slide">
+                            <div class="pdf">
+                              <div class="pdf__image"><img src="./assets/images/pdfs_1.jpg" alt="1"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pdfs__controllers">
+                            <div class="controllers">
+                              <div class="controllers__quant"><span class="controllers__slide" data-glide-el="track">01</span><span class="controllers__from">/</span><span class="controllers__all">08</span></div>
+                              <div class="controllers__arrows" data-glide-el="controls">
+                                <button data-glide-dir="&lt;">
+                                      <svg class="arrow--left arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                        <path d="M0 0 L5 6 L10 0"></path>
+                                      </svg>
+                                </button>
+                                <button data-glide-dir="&gt;">
+                                      <svg class="arrow--right arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                        <path d="M0 0 L5 6 L10 0"></path>
+                                      </svg>
+                                </button>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </section>
+        <section class="section more" id="more">
+          <div class="more__content">
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Подробнее о нас</h2><a class="section-subtitle" href="">посмотрите презентацию</a>
+                  <div class="section-text"></div>
+                </div>
+            <div class="more__body">
+              <div class="more__text"> <span>ООО «МГСЗ» создано 13 мая 2010 года в Санкт-Петербурге. Основной деятельностью нашей организации является оптовая и розничная торговля металлопрокатом. Компания с одинаковым успехом занимается снабжением как мелкорозничных клиентов, так и крупных промышленных предприятий.  Приоритетное направление — реализация на российском рынке качественного металлопроката, доступного потребителю, с возможностью комплектации заказа в максимально сжатые сроки. </span></div>
+            </div>
+          </div>
+        </section>
+        <section class="section advantages-horizontal" id="advantages">
+          <div class="advantages-horizontal__content">
+                    <div class="square-medium-blue square-medium-blue--light">
+                      <div class="square-medium-blue__inner"></div>
+                    </div>
+                <div class="section-medium-heading">
+                  <h3 class="section-medium-title">Наши преимущества</h3><a class="section-medium-subtitle" href=""></a>
+                </div>
+            <div class="advantages-horizontal__body">
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_1.png" alt="advantages_1"></div>
+                <div class="advantages__text"><span>Вас</span><span>не обвесят!</span></div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_2.png" alt="advantages_2"></div>
+                <div class="advantages__text"><span>Вам дадут</span><span>товар в долг!</span></div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_3.png" alt="advantages_3"></div>
+                <div class="advantages__text"><span>Вам</span><span>сделают скидку!</span></div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_4.png" alt="advantages_4"></div>
+                <div class="advantages__text"><span>Весь необходимый вам</span><span>ассортимент в одном месте!</span></div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__image"><img src="./assets/images/advantages_5.png" alt="advantages_5"></div>
+                <div class="advantages__text"><span>Специальные цены</span><span>при покупке в предоплату!</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section logistics" id="logistics">
+          <div class="logistics__content">
+                    <div class="square-medium-blue square-medium-blue--light">
+                      <div class="square-medium-blue__inner"></div>
+                    </div>
+                <div class="section-medium-heading">
+                  <h3 class="section-medium-title">Логистика</h3><a class="section-medium-subtitle" href=""></a>
+                </div>
+            <div class="logistics__body">
+              <div class="logistics__map"><img src="./assets/images/russia_map.png" alt="Russia">
+                <div class="logistics__text">Логистические возможности позволяют поставлять продукцию во все регионы России. Расстояние для нас не проблема, а интересная задача для наших логистов — доставить продукцию до заказчика в любую, даже самую удаленную точку России, быстро, надежно и недорого.</div>
+                <div class="logistics__items">
+                  <div class="log__item log__item1">Мурманск</div>
+                  <div class="log__item log__item2">Архангельск</div>
+                  <div class="log__item log__item3 log__item--top">Санкт-петербург</div>
+                  <div class="log__item log__item4">Иваново</div>
+                  <div class="log__item log__item5">Москва</div>
+                  <div class="log__item log__item6">Казань</div>
+                  <div class="log__item log__item7">Орел</div>
+                  <div class="log__item log__item8 log__item--top">Белгород</div>
+                  <div class="log__item log__item9">Севастополь</div>
+                  <div class="log__item log__item10">Волгоград</div>
+                  <div class="log__item log__item11">Краснодар</div>
+                  <div class="log__item log__item12">Екатеринбург</div>
+                  <div class="log__item log__item13">Новосибирск</div>
+                  <div class="log__item log__item14">Красноярск</div>
+                  <div class="log__item log__item15">Хабаровск</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section stock" id="stock">
+          <div class="stock__bg"></div>
+          <div class="stock__content">
+                    <div class="square-medium-blue square-medium-blue--light">
+                      <div class="square-medium-blue__inner"></div>
+                    </div>
+                <div class="section-medium-heading">
+                  <h3 class="section-medium-title">Наш склад</h3><a class="section-medium-subtitle" href=""></a>
+                </div>
+            <div class="stock__body">
+              <div class="stock__text">ООО «МГСЗ» обладает собственным складским помещением, расположенным пр. Александровской фермы, д. 29, что делает компанию еще более конкурентоспособной на рынке. Ассортимент продукции один из самых широких — трубы, сортовой, фасонный и листовой прокат различных размерови марок стали.</div>
+              <div class="stock__items stockSlider">
+                <div class="glide__track" data-glide-el="track">
+                  <div class="glide__slides">
+                    <div class="stock-item">
+                      <div class="stock-item__image"><img src="./assets/images/stock_1.jpg" alt="stock_1"></div>
+                          <div class="square-medium-red">
+                            <div class="square-medium-red__inner"></div>
+                          </div>
+                      <div class="stock-item__title">Название фотографии</div>
+                    </div>
+                    <div class="stock-item">
+                      <div class="stock-item__image"><img src="./assets/images/stock_2.jpg" alt="stock_2"></div>
+                          <div class="square-medium-red">
+                            <div class="square-medium-red__inner"></div>
+                          </div>
+                      <div class="stock-item__title">Название фотографии</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stock__controllers">
+                      <div class="controllers">
+                        <div class="controllers__quant"><span class="controllers__slide" data-glide-el="track">01</span><span class="controllers__from">/</span><span class="controllers__all">08</span></div>
+                        <div class="controllers__arrows" data-glide-el="controls">
+                          <button data-glide-dir="&lt;">
+                                <svg class="arrow--left arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                  <path d="M0 0 L5 6 L10 0"></path>
+                                </svg>
+                          </button>
+                          <button data-glide-dir="&gt;">
+                                <svg class="arrow--right arrow--big arrow--lightblue arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                  <path d="M0 0 L5 6 L10 0"></path>
+                                </svg>
+                          </button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="section contacts" id="contacts">
           <div class="contacts__content">
                     <div class="square-large-blue">
@@ -451,29 +796,35 @@
                   <div class="contact">
                     <h3 class="contact__title">офис в санкт-петербурге</h3>
                     <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
-                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                    <button class="contact__link pop-trg"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
-            <div class="contacts__piece contacts__map sp-office"><img src="./assets/images/sp-office.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__map sp-office">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af865219da72f7d67f4d0d8bdc857a2449816bd77bc2fa6070cef8cc6b06647b1&amp;amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            </div>
             <div class="contacts__piece contacts__data sp-stock">
                   <div class="contact">
                     <h3 class="contact__title">склад в санкт-петербурге</h3>
                     <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
-                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                    <button class="contact__link pop-trg"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
-            <div class="contacts__piece contacts__map sp-stock"><img src="./assets/images/sp-stock.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__map sp-stock">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af865219da72f7d67f4d0d8bdc857a2449816bd77bc2fa6070cef8cc6b06647b1&amp;amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            </div>
             <div class="contacts__piece contacts__data msk-stock">
                   <div class="contact">
                     <h3 class="contact__title">склад в москве</h3>
                     <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>Карачарово, ул. Стахановская, д. 19</span></div><a class="contact__phone" href="tel: 84996537548"><img src="./assets/images/phone-call.png" alt="address"><span> 8 (499) 653-75-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
-                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                    <button class="contact__link pop-trg"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
-            <div class="contacts__piece contacts__map msk-stock"><img src="./assets/images/msk-stock.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__map msk-stock">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af865219da72f7d67f4d0d8bdc857a2449816bd77bc2fa6070cef8cc6b06647b1&amp;amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            </div>
           </div>
         </section>
-            <div class="form">
+            <div class="form form--bottom">
               <div class="form__bg"><img src="./assets/images/form_lg.jpg" alt="Фон формы"></div>
               <div class="form__content">
                     <div class="square-large-blue">
@@ -521,13 +872,7 @@
                             <div class="square-small-blue__inner"></div>
                           </div>
                       <div class="footer-column__name">Компания</div>
-                      <div class="footer-column__lines">
-                        <div class="footer-column__line">Наши клиенты</div>
-                        <div class="footer-column__line">Наши объекты</div>
-                        <div class="footer-column__line">Наш склад</div>
-                        <div class="footer-column__line">Госты</div>
-                        <div class="footer-column__line">Спецпредложения</div>
-                        <div class="footer-column__line">Контакты</div>
+                      <div class="footer-column__lines"><a class="footer-column__line" href="">Наши клиенты</a><a class="footer-column__line" href="">Наши объекты</a><a class="footer-column__line" href="">Наш склад</a><a class="footer-column__line" href="">Госты</a><a class="footer-column__line" href="">Спецпредложения</a><a class="footer-column__line" href="">Контакты</a>
                         <!-- .footer-column__line.footer-column__line2=line2-->
                         <!-- .footer-column__line.footer-column__line3=line3-->
                         <!-- .footer-column__line.footer-column__line4=line4-->
@@ -541,12 +886,7 @@
                             <div class="square-small-blue__inner"></div>
                           </div>
                       <div class="footer-column__name">Металлоконструкции</div>
-                      <div class="footer-column__lines">
-                        <div class="footer-column__line">Закладные детали</div>
-                        <div class="footer-column__line">Сетки-каркасы</div>
-                        <div class="footer-column__line">Производство плоских каркасов</div>
-                        <div class="footer-column__line">Производство объемных каркасов</div>
-                        <div class="footer-column__line">Полезная информация</div>
+                      <div class="footer-column__lines"><a class="footer-column__line" href="">Закладные детали</a><a class="footer-column__line" href="">Сетки-каркасы</a><a class="footer-column__line" href="">Производство плоских каркасов</a><a class="footer-column__line" href="">Производство объемных каркасов</a><a class="footer-column__line" href="">Полезная информация</a>
                         <!-- .footer-column__line.footer-column__line2=line2-->
                         <!-- .footer-column__line.footer-column__line3=line3-->
                         <!-- .footer-column__line.footer-column__line4=line4-->
@@ -560,14 +900,7 @@
                             <div class="square-small-blue__inner"></div>
                           </div>
                       <div class="footer-column__name">Услуги</div>
-                      <div class="footer-column__lines">
-                        <div class="footer-column__line">Изоляция ППУ</div>
-                        <div class="footer-column__line">Изоляция труб ВУС 5</div>
-                        <div class="footer-column__line">Оцинкование металла</div>
-                        <div class="footer-column__line">Грунтовка</div>
-                        <div class="footer-column__line">Резка металла</div>
-                        <div class="footer-column__line">Доставка</div>
-                        <div class="footer-column__line">Погрузочно-разгрузочные работы</div>
+                      <div class="footer-column__lines"><a class="footer-column__line" href="">Изоляция ППУ</a><a class="footer-column__line" href="">Изоляция труб ВУС 5</a><a class="footer-column__line" href="">Оцинкование металла</a><a class="footer-column__line" href="">Грунтовка</a><a class="footer-column__line" href="">Резка металла</a><a class="footer-column__line" href="">Доставка</a><a class="footer-column__line" href="">Погрузочно-разгрузочные работы</a>
                         <!-- .footer-column__line.footer-column__line2=line2-->
                         <!-- .footer-column__line.footer-column__line3=line3-->
                         <!-- .footer-column__line.footer-column__line4=line4-->
@@ -589,7 +922,7 @@
         </footer>
       </div>
     </div>
-    <script src="./assets/libraries/glide-3.4.1/dist/glide.min.mjs"></script>
-    <script src="./assets/js/script.mjs"></script>
+    <script src="./assets/libraries/glide-3.4.1/dist/glide.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

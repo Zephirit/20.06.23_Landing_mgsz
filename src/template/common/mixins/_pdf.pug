@@ -1,6 +1,6 @@
-mixin pdf
+mixin pdf(cl,controll)
 	.pdfs
-		.glide
+		.glide__pdf(class=cl)
 			.glide__track(data-glide-el="track")
 				.glide__slides.pdfs__slides
 					each item in [{'img':'3'},{'img':'2'},{'img':'steel'},{'img':'1'}]
@@ -8,5 +8,5 @@ mixin pdf
 							.pdf
 								.pdf__image
 									img(src=`./assets/images/pdfs_${item.img}.jpg`, alt=item.img)
-			.pdfs__controllers
-				+controllers('controllers--white')
+			.pdfs__controllers(class=controll)
+				+controllers(controll)

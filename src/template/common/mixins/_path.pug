@@ -1,0 +1,6 @@
+mixin path(items,last)
+	.path
+		each item in items
+			a(href='/').path__from=item
+			.path__icon >>
+		.path__to=last

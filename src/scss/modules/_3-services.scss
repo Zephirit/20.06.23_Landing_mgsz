@@ -66,6 +66,19 @@
 	font-size: 22px;
 	// text-transform: uppercase;
 	font-weight: 700;
+	cursor: pointer;
+	transition: .5s;
+
+	
+	&:hover, &:focus {
+		box-shadow: 10px 30px 30px rgba(black,.2);
+		.service__number {
+			color: #729ccf;
+		}
+		.service__title {
+			color: $subColor;
+		}
+	}
 	@include phones {
 		// margin: 10px 10px;
 		padding: 15px;
@@ -101,6 +114,7 @@
 		color: #f1f1f1;
 		letter-spacing: -3px;
 		line-height: 47px;
+		transition: .5s;
 		@include phones {
 			font-size: 50px;
 		}
@@ -115,6 +129,7 @@
 		// height: 100%;
 		margin: 25px 0;
 		text-transform: uppercase;
+		transition: .5s;
 		@include phones {
 			font-size: 18px;
 			margin: 15px 0;

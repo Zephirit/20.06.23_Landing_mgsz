@@ -39,6 +39,9 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		@include phones {
+			margin-top: 50px
+		}
 
 		& span {
 			position: relative;
@@ -67,6 +70,7 @@
 		width: 100%;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: 15px;
 		& span{
 			font-size: 52px;
 			font-family: "NoirPro";

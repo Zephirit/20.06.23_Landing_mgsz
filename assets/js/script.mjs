@@ -93,7 +93,7 @@ window.onload = () => {
     const forActive = document.querySelectorAll('.for-active');
     forActive.forEach(item => {
       item.onclick = e => {
-        e.preventDefault();
+        // e.preventDefault();
         item.classList.toggle('selected');
       };
     });

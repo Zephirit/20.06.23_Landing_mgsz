@@ -10,6 +10,6 @@ mixin contact(title,address,tel,phone,mail,link)
 		a(href=`email:${email}`).contact__address.contact__email
 			img(src="./assets/images/envelope.png", alt="address")
 			span=mail
-		button.contact__link
+		button.contact__link.pop-trg
 			img(src="./assets/images/next2.png", alt="link")
 			span Обратная связь

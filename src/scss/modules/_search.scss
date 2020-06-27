@@ -4,12 +4,7 @@
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		margin: 15px 0;
-		&:hover {
-			& label {
-				transform: translate3d(-200%, 0, 0);
-			}
-		}
+		// margin: 15px 0;
 
 		& input {
 			position: relative;
@@ -21,27 +16,24 @@
 			padding-left: 65px;
 			@include phones {
 				height: 50px;;
+				padding-left: 65px;
 			}
-
-			&:focus {
-				&~label {
-					transform: translate3d(-200%, 0, 0);
+			&::placeholder {
+				position: absolute;
+				color: black;
+				line-height: 80px;
+				left: 65px;
+				font-size: 18px;
+				transform: translate3d(0, 0, 0);
+				transition: all .4s;
+				@include phones {
+					line-height: 45px;
+					left: 65px;
 				}
 			}
 		}
 
-		& label {
-			position: absolute;
-			line-height: 80px;
-			left: 65px;
-			font-size: 18px;
-			transform: translate3d(0, 0, 0);
-			transition: all .4s;
-			@include phones {
-				line-height: 45px;
-				left: 50px;
-			}
-		}
+		
 
 		& .square-small-blue {
 			@include centered(y);
@@ -62,6 +54,15 @@
 		background: #729ccf;
 		width: 80px;
 		height: 100%;
+		cursor: pointer;
+		transition: .5s;
+		&:hover, &:focus {
+			background: darken(#729ccf,5%);
+			outline: none;
+		}
+		&:active {
+			background: darken(#729ccf,10%);
+		}
 		@include phones {
 			width: 50px;
 		}
@@ -78,16 +79,37 @@
 	}
 	&--gray {
 		background:  #efefef;
+		height: 80px;
+		@include phones {
+			height: 50px;
+		}
 		.search__input {
-			width: 1170px;
-			margin: 0 auto;
+			width: 1140px;
+			margin: 0 auto 70px;
+			overflow: visible;
+			& input {
+				padding-left: 0;
+			}
 			@include phones {
 				width: 100%;
+				margin-top: 60px;
+				padding-left: 15px;
+				box-sizing: border-box;
+				&:before {
+					content: '';
+					position: absolute;
+					top: -60px;
+					left:0;
+					display: block;
+					width: 100%;
+					height: 60px;
+					background: $subColor;
+				}
 			}
 			.square-small-blue {
 				display: none;
 			}
-			label {
+			&::placeholder {
 				left: 0;
 				@include phones {
 					left: 15px;

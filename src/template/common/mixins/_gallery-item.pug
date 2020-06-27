@@ -1,0 +1,6 @@
+mixin gallery-item(number,name)
+	.gallery__item
+		.gallery__item-img
+			img(src=`./assets/images/gallery_${number}.jpg`, alt=`gallery_${number}`)
+		.gallery__item-name=name
+			+square-medium-red

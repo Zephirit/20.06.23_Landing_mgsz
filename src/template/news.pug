@@ -1,11 +1,10 @@
 //- Наследуемый шаблон _template
 extends ./templates/_template
 block variables
-	- var title = "Контакты"
+	- var title = "Новости компании"
 block content
 	include ./templates/_navigation
 	+search('search--gray')
-	+track
 	include ./templates/_61-news
 	+form
 	include ./templates/_7-contacts

@@ -50,12 +50,16 @@ $contrColor: #cf001f;
 
 
 @import "./modules/_contact.scss";
+@import "./modules/_lightmenu.scss";
 @import "./modules/_pdf.scss";
 @import "./modules/_controllers.scss";
+@import "./modules/_popup.scss";
 @import "./modules/_arrow.scss";
+@import "./modules/_filter.scss";
 @import "./modules/_oft.scss";
 @import "./modules/_search.scss";
 @import "./modules/_sideType.scss";
+@import "./modules/_card-big.scss";
 @import "./modules/_burger.scss";
 @import "./modules/_navburger.scss";
 @import "./modules/_sertificates.scss";
@@ -66,3 +70,5 @@ $contrColor: #cf001f;
 @import "./modules/_footer.scss";
 @import "./modules/_square.scss";
 @import "./modules/_title.scss";
+@import "./modules/_path.scss";
+@import "./modules/_table.scss";

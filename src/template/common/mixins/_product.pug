@@ -1,5 +1,5 @@
-mixin product(name,image)
-	.product
+mixin product(name,image,cl)
+	.product(class=cl)
 		.product__img
 			img(src=`./assets/images/products_${image}.jpg`, alt=`${image}`)
 		.product__name=name

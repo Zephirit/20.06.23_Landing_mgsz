@@ -1,0 +1,38 @@
+mixin select(id,title,items,cl)
+	.select(class=cl)
+		span.select__title.for-active
+			span=title
+			+arrow
+		ul
+			each item,index in items
+				li
+					input(type="checkbox" id=`${id}_${index}`)
+					label(for=`${id}_${index}`)
+						span=item
+mixin card-filter
+	.card-filter
+		+select('size','Размер',['Все','20','25','30','40'])
+		+select('thick','Толщина',['Все','1','1.5','2'])
+		+select('diam','Диаметр',['Все','20','25','30','40'])
+		+select('length','Длина',['Все','7.8','10','12'])
+		button.card-filter__apply
+			.card-filter__img
+				img(src="./assets/images/tick.png", alt="order")
+			span Применить фильтр
+		button.card-filter__reset
+			span.card-filter__close +
+			span Очистить фильтр
+mixin subsection-filter
+	.card-filter
+		+select('name','Наименование',['Бесшовная труба холоднодеформированная','Труба бесшовная горячедеформированная','Труба электросварная','Труба ппу','Труба вгп','Труба вгп','Труба нержавеющая'],'select--big')
+		+select('size','Размер',['Все','20','25','30','40'])
+		+select('thick','Толщина',['Все','1','1.5','2'])
+		+select('diam','Диаметр',['Все','20','25','30','40'])
+		+select('length','Длина',['Все','7.8','10','12'])
+		button.card-filter__apply
+			.card-filter__img
+				img(src="./assets/images/tick.png", alt="order")
+			span Применить фильтр
+		button.card-filter__reset
+			span.card-filter__close +
+			span Очистить фильтр

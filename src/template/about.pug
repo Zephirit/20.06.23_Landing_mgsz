@@ -4,8 +4,7 @@ block variables
 	- var title = "О компании"
 block content
 	include ./templates/_navigation
-	+search
-	+track
+	+search('search--gray')
 	include ./templates/_21-about
 	include ./templates/_22-clients
 	include ./templates/_23-reviews
@@ -14,5 +13,5 @@ block content
 	include ./templates/_26-logic
 	include ./templates/_27-stock
 	include ./templates/_7-contacts
-	+form
+	+form('form--bottom')
 	include ./templates/_footer

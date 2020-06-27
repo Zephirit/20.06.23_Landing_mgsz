@@ -1,0 +1,22 @@
+section.section.stock#stock
+	.stock__bg
+	.stock__content
+		+title-medium('Наш склад')
+		.stock__body
+		
+			.stock__text ООО «МГСЗ» обладает собственным складским помещением, расположенным пр. Александровской фермы, д. 29, что делает компанию еще более конкурентоспособной на рынке. Ассортимент продукции один из самых широких — трубы, сортовой, фасонный и листовой прокат различных размерови марок стали.
+			.stock__items.stockSlider
+				.glide__track(data-glide-el="track")
+					.glide__slides
+						.stock-item
+							.stock-item__image
+								img(src='./assets/images/stock_1.jpg', alt='stock_1')
+							+square-medium-red
+							.stock-item__title Название фотографии
+						.stock-item
+							.stock-item__image
+								img(src='./assets/images/stock_2.jpg', alt='stock_2')
+							+square-medium-red
+							.stock-item__title Название фотографии
+				.stock__controllers
+					+controllers

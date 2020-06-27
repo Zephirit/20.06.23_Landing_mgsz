@@ -1,10 +1,10 @@
 //- Наследуемый шаблон _template
 extends ./templates/_template
 block variables
-	- var title = "Каталог"
+	- var title = "Каталог продукции"
 block content
 	include ./templates/_navigation
-	+search
+	+search('search--gray')
 	+track
 	include ./templates/_11-catalog
 	+form

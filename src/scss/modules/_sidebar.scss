@@ -50,7 +50,7 @@ $sidebar-width: 240px;
       font-weight: 500;
       color: rgb(114, 156, 207);
       text-transform: uppercase;
-      padding: 7px 30px;
+      padding: 7px 25px;
     }
     & a {
       font-size: 20px;
@@ -59,7 +59,7 @@ $sidebar-width: 240px;
       color: rgb(37, 71, 119);
       text-decoration: none;
       text-transform: uppercase;
-      padding: 7px 30px;
+      padding: 7px 25px;
     }
   }
 
@@ -72,7 +72,7 @@ $sidebar-width: 240px;
       text-decoration: underline;
       text-transform: uppercase;
       line-height: 4;
-      padding: 7px 30px;
+      padding: 7px 25px;
     }
   }
 
@@ -104,7 +104,7 @@ $sidebar-width: 240px;
       position: relative;
       user-select: none;
       cursor: pointer;
-      padding: 20px 20px 20px 30px;
+      padding: 20px 20px 20px 25px;
       margin: 0;
       background: #d6d6d6;
       user-select: none;
@@ -135,18 +135,14 @@ $sidebar-width: 240px;
         }
       }
   }
-  &__rolling {
-  }
-  &__construct {
-  }
-  &__serv {
-  }
   &__other {
     position: relative;
+    cursor: pointer;
+    user-select: none;
     display: flex;
     align-items: center;
 		justify-content: flex-start;
-		padding: 20px 30px;
+		padding: 20px 25px;
     & img {
       position: relative;
       width: 100%;
@@ -173,10 +169,28 @@ $sidebar-width: 240px;
 	
   &__calc {
 		position: relative;
-		background-color: rgb(40, 80, 135);
+    background-color: rgb(40, 80, 135);
+    white-space: nowrap;
+    transition: .4s;;
+    &:hover{
+      background-color: darken(rgb(40, 80, 135),5%);
+    }
+    @include wave(#d6d6d6);
+    &:active{
+      background-color: darken(rgb(40, 80, 135),10%);
+    }
   }
   &__price {
 		position: relative;
-		background-color: rgb(207, 0, 31);
+    background-color: rgb(207, 0, 31);
+    white-space: nowrap;
+    transition: .4s;;
+    &:hover{
+      background-color: darken(rgb(207, 0, 31),5%);
+    }
+    @include wave(#d6d6d6);
+    &:active{
+      background-color: darken(rgb(207, 0, 31),10%);
+    }
   }
 }

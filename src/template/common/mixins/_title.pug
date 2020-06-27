@@ -4,3 +4,15 @@ mixin title-large(title,subtitle,text)
 		h2.section-title=title
 		a(href='').section-subtitle=subtitle
 		.section-text=text
+
+mixin title-medium(title,subtitle)
+	+square-medium-blue('square-medium-blue--light')
+	.section-medium-heading
+		h3.section-medium-title=title
+		a(href='').section-medium-subtitle=subtitle
+		
+mixin title-medium-lgs(title,subtitle)
+	+square-large-blue
+	.section-medium-heading
+		h3.section-medium-title=title
+		a(href='').section-medium-subtitle=subtitle

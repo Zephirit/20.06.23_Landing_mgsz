@@ -1,0 +1,13 @@
+section.section.clients#clients
+	.clients__content
+		+title-large('Наши клиенты','Подробнее')
+		+square-large-blue
+		.clients__body.clislider
+			.glide__track(data-glide-el="track")
+				.glide__slides
+					+client('Российские железные дороги','railway')
+					+client('Министерство обороны РФ','ministry')
+					+client('Петербургский метрополитен','subway')
+					+client('Госкорпорация "Росатом"','rosatom')
+			.clients__controllers
+				+controllers

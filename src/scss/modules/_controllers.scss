@@ -59,6 +59,12 @@
 			background: white;
 			box-shadow: 0;
 			border: 0;
+			transition: .5s;
+			&:hover, &:focus, &:active {
+				& path {
+					stroke: $contrColor;
+				}
+			}
 			@include phones {
 				width: 30px;
 				height: 100%;
@@ -84,7 +90,7 @@
 		& .controllers__slide {
 			color: white;
 		}
-	
+		
 		& .controllers__from {
 			color: #729ccf;
 		}
@@ -92,5 +98,18 @@
 		& .controllers__all {
 			color: #729ccf;
 		}
+		// @include phones{
+		// 	& .controllers__slide {
+		// 		color: #729ccf;
+		// 	}
+			
+		// 	& .controllers__from {
+		// 		color: #254777;
+		// 	}
+		
+		// 	& .controllers__all {
+		// 		color: #254777;
+		// 	}
+		// }
 	}
 }

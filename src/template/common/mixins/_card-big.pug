@@ -1,0 +1,64 @@
+mixin card-big
+	.card-big
+		.card-big__product
+			img(src="./assets/images/tubes.jpg", alt="tubes")
+		+square-medium-blue
+		.card-big__desc
+			.card-big__article
+				span=`Артикул `
+				span 123654
+			.card-big__title Краткие характеристики
+			.card-big__table
+				.card-big__mark.card-big__row
+					span.card-big__name Марка
+					span.card-big__value Ст20
+				.card-big__size.card-big__row
+					span.card-big__name Размер
+					span.card-big__value 51
+				.card-big__gost.card-big__row
+					span.card-big__name ГОСТ
+					span.card-big__value 8734-75
+				.card-big__length.card-big__row
+					span.card-big__name Длина
+					span.card-big__value 6000
+				ul.card-big__links
+					li.card-big__link
+						a(href="#") Прайс-лист
+					li.card-big__link
+						a(href="#") Описание
+					li.card-big__link
+						a(href="#") Все характеристики
+		.card-big__order
+			span.card-big__exist В наличии
+			ul.card-big__other
+				li.card-big__otherItem
+					a(href="#") Калькулятор металлопроката
+				li.card-big__otherItem
+					a(href="#") О доставке
+			button.card-big__tick
+				.card-big__img
+					img(src="./assets/images/tick.png", alt="order")
+				span Заказать
+mixin card-small(cl,img,art,title,gost,exist)
+	.card-small(class=cl)
+		.card-small__product
+			img(src=`./assets/images/${img}.png`, alt="tubes")
+		+square-medium-blue
+		.card-small__desc
+			.card-small__article
+				span=`Артикул `
+				span=art
+			.card-small__title=title
+			.card-small__table
+				.card-small__gost.card-small__row
+					span.card-small__name ГОСТ
+					span.card-small__value=gost
+				ul.card-small__links
+					li.card-small__link
+						a(href="#") Прайс-лист
+		.card-small__order
+			span.card-small__exist=exist
+			button.card-small__tick
+				.card-small__img
+					img(src="./assets/images/tick.png", alt="order")
+				span Заказать

@@ -1,0 +1,44 @@
+.requisite {
+	position: relative;
+	width: 100%;
+	background: white;
+	&__content{
+		position: relative;
+		max-width: 1170px;
+		margin: 35px auto 0;
+		padding: 40px 15px 100px;
+		box-sizing: border-box;
+		@include phones {
+            padding: 20px 15px 0;
+            margin: 0 0 40px;
+		}
+		.section-heading {
+			width: 100%;
+		}
+		.section-subtitle {
+			margin-left: 50px;
+		}
+	}
+	
+	&__body {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: space-between;
+		// margin-top: 70px;
+		@include phones {
+			justify-content: space-around;
+		}
+	}
+	&__text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+		font-family: Roboto;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 30px;
+	}
+}

@@ -4,10 +4,9 @@ block variables
 	- var title = "Контакты"
 block content
 	include ./templates/_navigation
-	+search
-	+track
-	+lightmenu
-	include ./templates/_7-contacts
+	+search('search--gray')
+	include ./templates/_31-contacts
+	//- include ./templates/_7-contacts
 	include ./templates/_32-requisite
 	+form
 	include ./templates/_footer

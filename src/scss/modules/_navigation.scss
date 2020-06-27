@@ -5,7 +5,7 @@
   color: white;
   &__menu {
     position: relative;
-    width: 1170px;
+    width: 1140px;
     margin: auto;
     height: 100%;
     display: flex;
@@ -140,7 +140,16 @@
     outline: none;
     display: flex;
     justify-content: center;
-    align-items: center;
+	align-items: center;
+	cursor: pointer;
+	transition: .5s;
+	&:hover, &:focus {
+        background: darken($contrColor,5%);
+        outline: none;
+      }
+	&:active {
+		background: darken($contrColor,10%);
+      }
     @include phones {
       height: 65px;
     }

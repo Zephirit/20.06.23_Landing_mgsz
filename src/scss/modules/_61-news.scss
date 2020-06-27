@@ -10,13 +10,13 @@
     .section-subtitle {
         display: none;
     }
-	&__content{
+	&__content {
         position: relative;
         display: flex;
         flex-direction: column;
 		max-width: 1170px;
 		// height: auto;
-		margin: 90px auto 0;
+		margin: 60px auto 0;
 		padding: 40px 15px 90px;
 		box-sizing: border-box;
 		@include phones {

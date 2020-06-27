@@ -18,12 +18,39 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="navburger for-active" id="navburger">
+          <div class="popup" id="popup">
+            <div class="popup__close" id="pop-close">+</div>
+            <div class="popup__price">
+              <div class="popup__img"><img src="./assets/images/pdf.png" alt="pdf"></div><span>Скачать полный прайс</span>
+            </div><span class="popup__desc">если вам необходим прайс отдельной категории или товара - запроситe его у нашего менеджера</span>
+            <div class="popup__heading">
+              <div class="popup__title">Оставить заявку</div>
+            </div>
+            <div class="popup__body">
+              <input type="name" placeholder="Ваше имя*" required>
+              <input type="phone" placeholder="Телефон*" required>
+              <input type="email" placeholder="Email*" required>
+              <textarea rows="5" placeholder="Текст сообщения"></textarea>
+              <div class="popup__body-submit">
+                <div class="popup__body-check">
+                  <div class="popup__body-checker">
+                    <input type="checkbox">
+                  </div>
+                  <div class="popup__body-text">Я подтверждаю, что ознакомлен(а) и согласен(на) с условиями<a href="">Передачи информации</a><span>*поля обязательные для заполнения</span></div>
+                </div>
+                <button class="popup__button">
+                  <div class="popup__button-icon"><img src="./assets/images/form_button.png" alt="Отправить"></div>
+                  <div class="popup__button-text">Отправить</div>
+                </button>
+              </div>
+            </div>
+          </div>
+      <div class="navburger brg" id="navburger">
         <div class="navburger-line"></div>
         <div class="navburger-line"></div>
         <div class="navburger-line"></div>
       </div>
-      <div class="burger for-active" id="burger">
+      <div class="burger brg" id="burger">
         <div class="burger-line"></div>
         <div class="burger-line"></div>
         <div class="burger-line"></div>
@@ -392,7 +419,7 @@
         <div class="sidebar__calc sidebar__other">
           <div class="sidebar__icon"><img src="./assets/images/calculator.png" alt="calculator"></div><span>Калькулятор</span>
         </div>
-        <div class="sidebar__price sidebar__other">
+        <div class="sidebar__price sidebar__other pop-trg">
           <div class="sidebar__icon"><img src="./assets/images/copy.png" alt="copy"></div><span>Скачать прайс-лист</span>
         </div>
       </sidebar>
@@ -400,42 +427,838 @@
         <nav class="navigation" id="navigation">
           <div class="navigation__menu">
             <ul class="navigation__list">
-              <li class="navigation__item for-active"><a href="/about"><span>О компании</span>
+              <li class="navigation__item for-active"><a href="/about.html"><span>О компании</span>
                       <svg class="arrow--right arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
                         <path d="M0 0 L5 6 L10 0"></path>
                       </svg></a>
                 <ul class="navigation__sublist">
-                  <li class="navigation__subitem"><a href="#"><span>Новости компании</span></a></li>
+                  <li class="navigation__subitem"><a href="/news.html"><span>Новости компании</span></a></li>
                       <div class="square-small-blue">
                         <div class="square-small-blue__inner"></div>
                       </div>
-                  <li class="navigation__subitem"><a href="#"><span>Новости рынка металлов</span></a></li>
+                  <li class="navigation__subitem"><a href="/news.html"><span>Новости рынка металлов</span></a></li>
                       <div class="square-small-blue">
                         <div class="square-small-blue__inner"></div>
                       </div>
-                  <li class="navigation__subitem"><a href="#"><span>Наши клиенты</span></a></li>
+                  <li class="navigation__subitem"><a href="/about.html"><span>Наши клиенты</span></a></li>
                 </ul>
               </li>
-              <li class="navigation__item"><a href="#"><span>Клиенты</span></a></li>
+              <li class="navigation__item"><a href="/about.html"><span>Клиенты</span></a></li>
               <li class="navigation__item"><a href="/gallery.html"><span>Галерея</span></a></li>
-              <li class="navigation__item"><a href="#"><span>Полезное</span></a></li>
-              <li class="navigation__item"><a href="/contacts"><span>Контакты</span></a></li>
+              <li class="navigation__item"><a href="/about.html"><span>Полезное</span></a></li>
+              <li class="navigation__item"><a href="/contacts.html"><span>Контакты</span></a></li>
             </ul>
-            <button class="navigation__tick">
+            <button class="navigation__tick pop-trg">
               <div class="navigation__img"><img src="./assets/images/tick.png" alt="order"></div><span>Оставить заявку</span>
             </button>
           </div>
         </nav>
-            <div class="search" id="search">
+            <div class="search search--gray" id="search">
               <div class="search__input">
                     <div class="square-small-blue">
                       <div class="square-small-blue__inner"></div>
                     </div>
-                <input type="text">
-                <label>Что вы ищете?</label>
+                <input type="text" placeholder="Что вы ищете?">
                 <div class="search__magnify"><img src="./assets/images/magnifying-glass.png" alt="magnifying-glass"></div>
               </div>
             </div>
+        <section class="section subsection" id="subsection">
+          <div class="subsection__content">
+                <div class="path"><a class="path__from" href="/">Главная</a>
+                  <div class="path__icon">>></div><a class="path__from" href="/">Каталог продукции</a>
+                  <div class="path__icon">>></div><a class="path__from" href="/">Сортовой прокат</a>
+                  <div class="path__icon">>></div><a class="path__from" href="/">Трубы</a>
+                  <div class="path__icon">>></div>
+                  <div class="path__to">Новости компании</div>
+                </div>
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">Трубы профильные</h2><a class="section-subtitle" href=""></a>
+                  <div class="section-text"></div>
+                </div>
+                <ul class="lightmenu">
+                  <li><a href="#">Бесшовная труба</a></li>
+                  <li><a href="#">Труба электросварная</a></li>
+                  <li><a href="#">Труба ППУ</a></li>
+                  <li><a href="#">ТРУБА ВГП</a></li>
+                  <li><a href="#">ТРУБА нержавеющая</a></li>
+                </ul>
+            <div class="subsection__body">
+                  <div class="card-small exist">
+                    <div class="card-small__product"><img src="./assets/images/tubes1.png" alt="tubes"></div>
+                        <div class="square-medium-blue">
+                          <div class="square-medium-blue__inner"></div>
+                        </div>
+                    <div class="card-small__desc">
+                      <div class="card-small__article"><span>Артикул </span><span>123654</span></div>
+                      <div class="card-small__title">бесшовная труба холоднодеформированная</div>
+                      <div class="card-small__table">
+                        <div class="card-small__gost card-small__row"><span class="card-small__name">ГОСТ</span><span class="card-small__value">8734-75</span></div>
+                        <ul class="card-small__links">
+                          <li class="card-small__link"><a href="#">Прайс-лист</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-small__order"><span class="card-small__exist">в наличии</span>
+                      <button class="card-small__tick">
+                        <div class="card-small__img"><img src="./assets/images/tick.png" alt="order"></div><span>Заказать</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-small to-order">
+                    <div class="card-small__product"><img src="./assets/images/tubes2.png" alt="tubes"></div>
+                        <div class="square-medium-blue">
+                          <div class="square-medium-blue__inner"></div>
+                        </div>
+                    <div class="card-small__desc">
+                      <div class="card-small__article"><span>Артикул </span><span>123654</span></div>
+                      <div class="card-small__title">Труба бесшовная горячедеформированная</div>
+                      <div class="card-small__table">
+                        <div class="card-small__gost card-small__row"><span class="card-small__name">ГОСТ</span><span class="card-small__value">8731/8732</span></div>
+                        <ul class="card-small__links">
+                          <li class="card-small__link"><a href="#">Прайс-лист</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-small__order"><span class="card-small__exist">под заказ</span>
+                      <button class="card-small__tick">
+                        <div class="card-small__img"><img src="./assets/images/tick.png" alt="order"></div><span>Заказать</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-small exist">
+                    <div class="card-small__product"><img src="./assets/images/tubes1.png" alt="tubes"></div>
+                        <div class="square-medium-blue">
+                          <div class="square-medium-blue__inner"></div>
+                        </div>
+                    <div class="card-small__desc">
+                      <div class="card-small__article"><span>Артикул </span><span>123654</span></div>
+                      <div class="card-small__title">Труба электросварная</div>
+                      <div class="card-small__table">
+                        <div class="card-small__gost card-small__row"><span class="card-small__name">ГОСТ</span><span class="card-small__value">8734-75</span></div>
+                        <ul class="card-small__links">
+                          <li class="card-small__link"><a href="#">Прайс-лист</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-small__order"><span class="card-small__exist">в наличии</span>
+                      <button class="card-small__tick">
+                        <div class="card-small__img"><img src="./assets/images/tick.png" alt="order"></div><span>Заказать</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-small exist">
+                    <div class="card-small__product"><img src="./assets/images/tubes4.png" alt="tubes"></div>
+                        <div class="square-medium-blue">
+                          <div class="square-medium-blue__inner"></div>
+                        </div>
+                    <div class="card-small__desc">
+                      <div class="card-small__article"><span>Артикул </span><span>123654</span></div>
+                      <div class="card-small__title">труба ппу</div>
+                      <div class="card-small__table">
+                        <div class="card-small__gost card-small__row"><span class="card-small__name">ГОСТ</span><span class="card-small__value">8734-75</span></div>
+                        <ul class="card-small__links">
+                          <li class="card-small__link"><a href="#">Прайс-лист</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-small__order"><span class="card-small__exist">в наличии</span>
+                      <button class="card-small__tick">
+                        <div class="card-small__img"><img src="./assets/images/tick.png" alt="order"></div><span>Заказать</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-small exist">
+                    <div class="card-small__product"><img src="./assets/images/tubes2.png" alt="tubes"></div>
+                        <div class="square-medium-blue">
+                          <div class="square-medium-blue__inner"></div>
+                        </div>
+                    <div class="card-small__desc">
+                      <div class="card-small__article"><span>Артикул </span><span>123654</span></div>
+                      <div class="card-small__title">труба вгп</div>
+                      <div class="card-small__table">
+                        <div class="card-small__gost card-small__row"><span class="card-small__name">ГОСТ</span><span class="card-small__value">8731/8732</span></div>
+                        <ul class="card-small__links">
+                          <li class="card-small__link"><a href="#">Прайс-лист</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-small__order"><span class="card-small__exist">в наличии</span>
+                      <button class="card-small__tick">
+                        <div class="card-small__img"><img src="./assets/images/tick.png" alt="order"></div><span>Заказать</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-small exist">
+                    <div class="card-small__product"><img src="./assets/images/tubes1.png" alt="tubes"></div>
+                        <div class="square-medium-blue">
+                          <div class="square-medium-blue__inner"></div>
+                        </div>
+                    <div class="card-small__desc">
+                      <div class="card-small__article"><span>Артикул </span><span>123654</span></div>
+                      <div class="card-small__title">труба нержавеющая</div>
+                      <div class="card-small__table">
+                        <div class="card-small__gost card-small__row"><span class="card-small__name">ГОСТ</span><span class="card-small__value">8731/8732</span></div>
+                        <ul class="card-small__links">
+                          <li class="card-small__link"><a href="#">Прайс-лист</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-small__order"><span class="card-small__exist">в наличии</span>
+                      <button class="card-small__tick">
+                        <div class="card-small__img"><img src="./assets/images/tick.png" alt="order"></div><span>Заказать</span>
+                      </button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </section>
+        <section class="section subsection-price" id="subsection-price">
+          <div class="subsection-price__content">
+                    <div class="square-medium-blue square-medium-blue--light">
+                      <div class="square-medium-blue__inner"></div>
+                    </div>
+                <div class="section-medium-heading">
+                  <h3 class="section-medium-title">Прайс-лист на трубы</h3><a class="section-medium-subtitle" href=""></a>
+                </div>
+            <div class="subsection-price__body">
+                  <div class="card-filter">
+                        <div class="select select--big"><span class="select__title for-active"><span>Наименование</span>
+                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                  <path d="M0 0 L5 6 L10 0"></path>
+                                </svg></span>
+                          <ul>
+                            <li>
+                              <input type="checkbox" id="name_0">
+                              <label for="name_0"><span>Бесшовная труба холоднодеформированная</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="name_1">
+                              <label for="name_1"><span>Труба бесшовная горячедеформированная</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="name_2">
+                              <label for="name_2"><span>Труба электросварная</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="name_3">
+                              <label for="name_3"><span>Труба ппу</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="name_4">
+                              <label for="name_4"><span>Труба вгп</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="name_5">
+                              <label for="name_5"><span>Труба вгп</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="name_6">
+                              <label for="name_6"><span>Труба нержавеющая</span></label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="select"><span class="select__title for-active"><span>Размер</span>
+                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                  <path d="M0 0 L5 6 L10 0"></path>
+                                </svg></span>
+                          <ul>
+                            <li>
+                              <input type="checkbox" id="size_0">
+                              <label for="size_0"><span>Все</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="size_1">
+                              <label for="size_1"><span>20</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="size_2">
+                              <label for="size_2"><span>25</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="size_3">
+                              <label for="size_3"><span>30</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="size_4">
+                              <label for="size_4"><span>40</span></label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="select"><span class="select__title for-active"><span>Толщина</span>
+                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                  <path d="M0 0 L5 6 L10 0"></path>
+                                </svg></span>
+                          <ul>
+                            <li>
+                              <input type="checkbox" id="thick_0">
+                              <label for="thick_0"><span>Все</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="thick_1">
+                              <label for="thick_1"><span>1</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="thick_2">
+                              <label for="thick_2"><span>1.5</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="thick_3">
+                              <label for="thick_3"><span>2</span></label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="select"><span class="select__title for-active"><span>Диаметр</span>
+                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                  <path d="M0 0 L5 6 L10 0"></path>
+                                </svg></span>
+                          <ul>
+                            <li>
+                              <input type="checkbox" id="diam_0">
+                              <label for="diam_0"><span>Все</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="diam_1">
+                              <label for="diam_1"><span>20</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="diam_2">
+                              <label for="diam_2"><span>25</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="diam_3">
+                              <label for="diam_3"><span>30</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="diam_4">
+                              <label for="diam_4"><span>40</span></label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="select"><span class="select__title for-active"><span>Длина</span>
+                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                  <path d="M0 0 L5 6 L10 0"></path>
+                                </svg></span>
+                          <ul>
+                            <li>
+                              <input type="checkbox" id="length_0">
+                              <label for="length_0"><span>Все</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="length_1">
+                              <label for="length_1"><span>7.8</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="length_2">
+                              <label for="length_2"><span>10</span></label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="length_3">
+                              <label for="length_3"><span>12</span></label>
+                            </li>
+                          </ul>
+                        </div>
+                    <button class="card-filter__apply">
+                      <div class="card-filter__img"><img src="./assets/images/tick.png" alt="order"></div><span>Применить фильтр</span>
+                    </button>
+                    <button class="card-filter__reset"><span class="card-filter__close">+</span><span>Очистить фильтр</span></button>
+                  </div>
+              <h2>Труба бесшовная холоднодеформированная</h2>
+                  <div class="table table--small">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Сортамент</th>
+                          <th>Длина,м</th>
+                          <th>Цена*</th>
+                          <th>Выбрать</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Труба 57х1 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х2 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х1 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х2 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                      </tbody>
+                    </table><span class="table__desc">*Цена является ориентировочной и зависит от типа оплаты, объема и места доставки.</span>
+                  </div>
+              <h2>Труба бесшовная холоднодеформированная</h2>
+                  <div class="table table--small">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Сортамент</th>
+                          <th>Длина,м</th>
+                          <th>Цена*</th>
+                          <th>Выбрать</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Труба 57х1 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х2 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х1 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х2 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                      </tbody>
+                    </table><span class="table__desc">*Цена является ориентировочной и зависит от типа оплаты, объема и места доставки.</span>
+                  </div>
+              <h2>Труба бесшовная холоднодеформированная</h2>
+                  <div class="table table--small">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Сортамент</th>
+                          <th>Длина,м</th>
+                          <th>Цена*</th>
+                          <th>Выбрать</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Труба 57х1 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х2 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х1 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х2 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х3.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х4.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х5.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6 ГОСТ 8734-75</td>
+                          <td>6</td>
+                          <td>250</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х6.5 ГОСТ 8734-75</td>
+                          <td>10</td>
+                          <td>690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7 ГОСТ 8734-75</td>
+                          <td>8</td>
+                          <td>230</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                        <tr>
+                          <td>Труба 57х7.5 ГОСТ 8734-75</td>
+                          <td>4</td>
+                          <td>1690</td>
+                          <td><a href="#">Заказать</a></td>
+                        </tr>
+                      </tbody>
+                    </table><span class="table__desc">*Цена является ориентировочной и зависит от типа оплаты, объема и места доставки.</span>
+                  </div>
+            </div>
+          </div>
+        </section>
+        <section class="section desc" id="desc">
+          <div class="desc__content">
+                    <div class="square-large-blue">
+                      <div class="square-large-blue__inner"></div>
+                    </div>
+                <div class="section-heading">
+                  <h2 class="section-title">текст для продвижения</h2><a class="section-subtitle" href=""></a>
+                  <div class="section-text"></div>
+                </div>
+            <div class="desc__body">
+              <div class="desc__text"> <span>Текст-заполнитель - это текст, который имеет некоторые характеристики реального письменного текста, но является случайным или генерируется иным образом. Он может использоваться для отображения образца шрифтов, создания текста для тестирования или для подделки фильтра нежелательной почты. Текст-заполнитель - это текст, который имеет некоторые характеристики реального письменного текста, но является случайным или генерируется иным образом. Он может использоваться для отображения образца шрифтов, создания текста для тестирования или для подделки фильтра нежелательной почты. Текст-заполнитель - это текст, который имеет некоторые характеристики реального письменного текста, но является случайным или генерируется иным образом. Он может использоваться для отображения образца шрифтов, создания текста для тестирования или для подделки фильтра нежелательной почты.</span></div>
+            </div>
+          </div>
+        </section>
             <div class="form">
               <div class="form__bg"><img src="./assets/images/form_lg.jpg" alt="Фон формы"></div>
               <div class="form__content">
@@ -487,26 +1310,32 @@
                   <div class="contact">
                     <h3 class="contact__title">офис в санкт-петербурге</h3>
                     <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
-                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                    <button class="contact__link pop-trg"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
-            <div class="contacts__piece contacts__map sp-office"><img src="./assets/images/sp-office.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__map sp-office">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af865219da72f7d67f4d0d8bdc857a2449816bd77bc2fa6070cef8cc6b06647b1&amp;amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            </div>
             <div class="contacts__piece contacts__data sp-stock">
                   <div class="contact">
                     <h3 class="contact__title">склад в санкт-петербурге</h3>
                     <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>пр-кт Медиков, д.9 лит.Б, оф.303</span></div><a class="contact__phone" href="tel:88124481348"><img src="./assets/images/phone-call.png" alt="address"><span>8 (812) 448-13-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
-                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                    <button class="contact__link pop-trg"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
-            <div class="contacts__piece contacts__map sp-stock"><img src="./assets/images/sp-stock.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__map sp-stock">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af865219da72f7d67f4d0d8bdc857a2449816bd77bc2fa6070cef8cc6b06647b1&amp;amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            </div>
             <div class="contacts__piece contacts__data msk-stock">
                   <div class="contact">
                     <h3 class="contact__title">склад в москве</h3>
                     <div class="contact__address"><img src="./assets/images/place.png" alt="address"><span>Карачарово, ул. Стахановская, д. 19</span></div><a class="contact__phone" href="tel: 84996537548"><img src="./assets/images/phone-call.png" alt="address"><span> 8 (499) 653-75-48</span></a><a class="contact__address contact__email" href="email:undefined"><img src="./assets/images/envelope.png" alt="address"><span>sale@mgsz.ru</span></a>
-                    <button class="contact__link"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
+                    <button class="contact__link pop-trg"><img src="./assets/images/next2.png" alt="link"><span>Обратная связь</span></button>
                   </div>
             </div>
-            <div class="contacts__piece contacts__map msk-stock"><img src="./assets/images/msk-stock.jpg" alt="sp-office"></div>
+            <div class="contacts__piece contacts__map msk-stock">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af865219da72f7d67f4d0d8bdc857a2449816bd77bc2fa6070cef8cc6b06647b1&amp;amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            </div>
           </div>
         </section>
         <footer class="animated rubberBand">
@@ -521,13 +1350,7 @@
                             <div class="square-small-blue__inner"></div>
                           </div>
                       <div class="footer-column__name">Компания</div>
-                      <div class="footer-column__lines">
-                        <div class="footer-column__line">Наши клиенты</div>
-                        <div class="footer-column__line">Наши объекты</div>
-                        <div class="footer-column__line">Наш склад</div>
-                        <div class="footer-column__line">Госты</div>
-                        <div class="footer-column__line">Спецпредложения</div>
-                        <div class="footer-column__line">Контакты</div>
+                      <div class="footer-column__lines"><a class="footer-column__line" href="">Наши клиенты</a><a class="footer-column__line" href="">Наши объекты</a><a class="footer-column__line" href="">Наш склад</a><a class="footer-column__line" href="">Госты</a><a class="footer-column__line" href="">Спецпредложения</a><a class="footer-column__line" href="">Контакты</a>
                         <!-- .footer-column__line.footer-column__line2=line2-->
                         <!-- .footer-column__line.footer-column__line3=line3-->
                         <!-- .footer-column__line.footer-column__line4=line4-->
@@ -541,12 +1364,7 @@
                             <div class="square-small-blue__inner"></div>
                           </div>
                       <div class="footer-column__name">Металлоконструкции</div>
-                      <div class="footer-column__lines">
-                        <div class="footer-column__line">Закладные детали</div>
-                        <div class="footer-column__line">Сетки-каркасы</div>
-                        <div class="footer-column__line">Производство плоских каркасов</div>
-                        <div class="footer-column__line">Производство объемных каркасов</div>
-                        <div class="footer-column__line">Полезная информация</div>
+                      <div class="footer-column__lines"><a class="footer-column__line" href="">Закладные детали</a><a class="footer-column__line" href="">Сетки-каркасы</a><a class="footer-column__line" href="">Производство плоских каркасов</a><a class="footer-column__line" href="">Производство объемных каркасов</a><a class="footer-column__line" href="">Полезная информация</a>
                         <!-- .footer-column__line.footer-column__line2=line2-->
                         <!-- .footer-column__line.footer-column__line3=line3-->
                         <!-- .footer-column__line.footer-column__line4=line4-->
@@ -560,14 +1378,7 @@
                             <div class="square-small-blue__inner"></div>
                           </div>
                       <div class="footer-column__name">Услуги</div>
-                      <div class="footer-column__lines">
-                        <div class="footer-column__line">Изоляция ППУ</div>
-                        <div class="footer-column__line">Изоляция труб ВУС 5</div>
-                        <div class="footer-column__line">Оцинкование металла</div>
-                        <div class="footer-column__line">Грунтовка</div>
-                        <div class="footer-column__line">Резка металла</div>
-                        <div class="footer-column__line">Доставка</div>
-                        <div class="footer-column__line">Погрузочно-разгрузочные работы</div>
+                      <div class="footer-column__lines"><a class="footer-column__line" href="">Изоляция ППУ</a><a class="footer-column__line" href="">Изоляция труб ВУС 5</a><a class="footer-column__line" href="">Оцинкование металла</a><a class="footer-column__line" href="">Грунтовка</a><a class="footer-column__line" href="">Резка металла</a><a class="footer-column__line" href="">Доставка</a><a class="footer-column__line" href="">Погрузочно-разгрузочные работы</a>
                         <!-- .footer-column__line.footer-column__line2=line2-->
                         <!-- .footer-column__line.footer-column__line3=line3-->
                         <!-- .footer-column__line.footer-column__line4=line4-->
@@ -589,7 +1400,7 @@
         </footer>
       </div>
     </div>
-    <script src="./assets/libraries/glide-3.4.1/dist/glide.min.mjs"></script>
-    <script src="./assets/js/script.mjs"></script>
+    <script src="./assets/libraries/glide-3.4.1/dist/glide.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

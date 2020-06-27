@@ -1,0 +1,19 @@
+mixin table(rows,cl)
+	.table(class=cl)
+		table
+			thead
+				tr
+					th Сортамент
+					th Длина,м
+					th Цена*
+					th Выбрать
+			tbody
+				each row in rows
+					tr
+						td=row[0]
+						td=row[1]
+						td=row[2]
+						td
+							a(href="#") Заказать
+		span.table__desc *Цена является ориентировочной и зависит от типа оплаты, объема и места доставки.
+	

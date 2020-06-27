@@ -1,0 +1,124 @@
+.table {
+  position: relative;
+  width: 100%;
+
+  & table {
+    width: 100%;
+  }
+  & thead {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding-right: 16px;
+    box-sizing: border-box;
+    &:after {
+      content: "";
+      position: absolute;
+      background: #254777;
+      right: 2px;
+      top: 2px;
+      width: 20px;
+      height: calc(100% - 6px);
+    }
+    & th {
+      font-size: 14px;
+      font-family: "NoirPro";
+      color: rgb(255, 255, 255);
+      background: #254777;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 20px 0;
+      box-sizing: border-box;
+
+      &:nth-child(1) {
+        text-align: left;
+        text-indent: 35px;
+        width: 45%;
+      }
+      &:nth-child(2) {
+        text-align: center;
+        width: 10%;
+      }
+      &:nth-child(3) {
+        text-align: center;
+        width: 30%;
+      }
+      &:nth-child(4) {
+        text-align: center;
+        width: 25%;
+      }
+    }
+  }
+  & tbody {
+    position: relative;
+    display: block;
+    height: 504px;
+    overflow-y: scroll;
+    & tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      &:nth-child(2n) {
+        background: #efefef;
+      }
+    }
+    & td {
+      &:nth-child(1) {
+        font-size: 16px;
+        font-family: "Roboto";
+        color: rgb(0, 0, 0);
+        line-height: 2;
+        text-align: left;
+        text-indent: 35px;
+        width: 45%;
+      }
+      &:nth-child(2) {
+        font-size: 16px;
+        font-family: "Roboto";
+        color: rgb(0, 0, 0);
+        line-height: 2.5;
+        text-align: center;
+        width: 10%;
+      }
+
+      &:nth-child(3) {
+        font-size: 14px;
+        font-family: "NoirPro";
+        font-weight: 500;
+        color: rgb(37, 71, 119);
+        text-transform: uppercase;
+        text-align: center;
+        width: 30%;
+        &:after {
+          content: " РУБ.";
+        }
+      }
+      &:nth-child(4) {
+        text-align: center;
+        width: 25%;
+        & a {
+          font-size: 14px;
+          font-family: "NoirPro";
+          color: rgb(207, 0, 31);
+          text-decoration: underline;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &__desc{
+      position: relative;
+      font-size: 12px;
+      font-family: "Roboto";
+      color: rgb(37, 71, 119);
+      line-height: 3.333;
+      text-align: left;
+      padding-left: 35px;
+  }
+  &--small{
+    & tbody{
+      height: 275px;
+    }
+  }
+}

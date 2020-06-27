@@ -1,0 +1,61 @@
+.more {
+	position: relative;
+	width: 100%;
+	background: white;
+
+	&__content{
+		position: relative;
+		max-width: 1170px;
+		margin: 285px auto 0;
+		padding: 40px 15px 50px;
+		box-sizing: border-box;
+		@include phones {
+			margin-top: 20px;
+			padding: 20px 15px 0;
+		}
+		.section-heading {
+			width: 100%;
+			@include phones {
+				width: 95%;
+			}
+		}
+		.section-subtitle {
+			margin-left: 50px;
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: -40px;
+				display: inline-block;
+				height: 36px;
+				width: 31px;
+				z-index: 10;
+				background: url(/assets/images/pdf.png);
+				background-size: contain;
+			}
+			@include phones {
+				margin-top: 25px;
+			}
+		}
+	}
+	
+	&__body {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: space-between;
+		// margin-top: 70px;
+		@include phones {
+			justify-content: space-around;
+		}
+	}
+	&__text {
+		position: relative;
+		font-family: Roboto;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 30px;
+	}
+}

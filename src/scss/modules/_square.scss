@@ -18,8 +18,8 @@
 	height: 32px;
 	width: 32px;
 	background-color: $subColor;
-	left: -35px;
-	top: -16px;
+	left: -15px;
+	top: -15px;
 	&__inner {
 		position: relative;
 		margin: 8px;
@@ -27,13 +27,19 @@
 		width: 16px;
 		background-color: white; 
 	}
+	&--light{
+		background-color: #729ccf;
+		@include phones {
+			display: none;
+		}
+	}
 }
 .square-large-blue {
 	position: absolute;
 	height: 60px;
 	width: 60px;
 	background-color: #729ccf;
-	left: -45px;
+	left: -20px;
 	top: -30px;
 	@include phones {
 		// display: none;

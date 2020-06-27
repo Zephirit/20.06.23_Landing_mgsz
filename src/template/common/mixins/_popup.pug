@@ -1,0 +1,26 @@
+mixin popup(cl)
+	.popup#popup(class=cl)
+		#pop-close.popup__close +
+		.popup__price
+			.popup__img
+				img(src="./assets/images/pdf.png", alt="pdf")
+			span Скачать полный прайс
+		span.popup__desc если вам необходим прайс отдельной категории или товара - запроситe его у нашего менеджера
+		.popup__heading
+			.popup__title Оставить заявку
+		.popup__body
+			input(type='name' placeholder='Ваше имя*' required)
+			input(type='phone' placeholder='Телефон*' required)
+			input(type='email' placeholder='Email*' required)
+			textarea(rows="5" placeholder='Текст сообщения')
+			.popup__body-submit
+				.popup__body-check
+					.popup__body-checker
+						input(type='checkbox')
+					.popup__body-text Я подтверждаю, что ознакомлен(а) и согласен(на) с условиями
+						a(href='') Передачи информации
+						span *поля обязательные для заполнения
+				button.popup__button
+					.popup__button-icon
+						img(src="./assets/images/form_button.png", alt="Отправить")
+					.popup__button-text Отправить
